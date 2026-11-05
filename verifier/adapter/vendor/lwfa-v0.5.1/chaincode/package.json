@@ -1,0 +1,28 @@
+{
+  "name": "lwfa-chaincode",
+  "version": "0.5.1",
+  "private": true,
+  "description": "LWFA version-bound lifecycle, controlled rerun, issues and review history",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "fabric-chaincode-node start",
+    "metadata": "fabric-chaincode-node metadata generate --file ../results/contract-metadata.json"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "fabric-contract-api": "2.5.8",
+    "fabric-shim": "2.5.8"
+  },
+  "files": [
+    "index.js",
+    "model.js",
+    "state.js",
+    "LWFAContract.js",
+    "profiles.json",
+    "package-lock.json",
+    "issues.js"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "lwfa-research",
+  "version": "0.5.1",
+  "private": true,
+  "description": "LWFA version-bound lifecycle, controlled rerun, issues and review history",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "test:foundation": "node --test tests/rules.test.js",
+    "test:contract": "node --test tests/integration.test.js",
+    "check": "node --check chaincode/model.js && node --check chaincode/state.js && node --check chaincode/LWFAContract.js && node --check chaincode/index.js",
+    "test:isolated": "node --require ./tests/sdk-isolation.cjs --test tests/*.test.js",
+    "test:m2": "node --test --test-name-pattern=M2 tests/integration.test.js",
+    "release:check": "node release-check.js",
+    "profiles": "node release-check.js profiles",
+    "metadata": "npm run metadata --prefix chaincode",
+    "smoke": "node client/smoke.js",
+    "test:v04": "node --test tests/v04.test.js tests/history.test.js tests/package.test.js",
+    "smoke:m3": "node client/m3-smoke.js",
+    "test:m3": "node --test tests/m3*.test.js"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}
