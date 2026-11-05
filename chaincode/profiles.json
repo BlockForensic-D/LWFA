@@ -1,0 +1,199 @@
+{
+  "deployment": {
+    "roleAttribute": "lwfa.role",
+    "roleMSPs": {
+      "AcquisitionOperator": [
+        "Org1MSP"
+      ],
+      "ForensicInvestigator": [
+        "Org1MSP"
+      ],
+      "AssuranceReviewer": [
+        "Org2MSP"
+      ],
+      "IndependentReviewer": [
+        "Org3MSP"
+      ]
+    }
+  },
+  "admission": {
+    "profileKind": "ADMISSION",
+    "profileID": "alpha0",
+    "version": 5,
+    "schemaVersion": "1.0",
+    "materialTypes": [
+      "CONTEXT",
+      "ARTIFACT",
+      "PROCESS",
+      "FINDING",
+      "REPORT"
+    ],
+    "roles": [
+      "AcquisitionOperator",
+      "ForensicInvestigator",
+      "AssuranceReviewer",
+      "IndependentReviewer"
+    ],
+    "rules": {
+      "versioning": "IMMUTABLE_SEQUENTIAL_VERSIONS_WITH_EXPLICIT_OLDER_PREDECESSOR",
+      "dependencies": "EXACT_SORTED_UNIQUE_DECLARED_REFERENCES_SAME_CASE_COMMITTED",
+      "formationContext": "PURPOSE_AND_DECLARED_UTC_TIME_OR_EXPLAINED_UNKNOWN",
+      "timestamp": "UTC_ISO8601_MILLISECONDS_CALENDAR_VALID",
+      "incident": "INCIDENT_ROOT_AND_MATCHING_DECLARED_RECORDED_TIME",
+      "artifact": "INCIDENT_DEPENDENCY_AND_SINGLE_BOUND_BLOB",
+      "process": "EXAMINATION_OR_ANALYSIS_WITH_DISTINCT_INPUT_IDS",
+      "inputBlob": "ARTIFACT_BLOB_OR_PROCESS_OUTPUT_WITH_EXACT_SLOT_AND_DIGEST",
+      "inputRecord": "MANUAL_PROCESS_RESULT_SUMMARY",
+      "manual": "NAMED_METHOD_RATIONALE_NONEMPTY_RESULT_OPTIONAL_OUTPUTS",
+      "tool": "NAMED_METHOD_VERSION_AND_DIGEST_VALUE_OR_UNKNOWN_NONEMPTY_OUTPUTS",
+      "parameters": "OBJECT_VALUE_OR_UNKNOWN_NOT_APPLICABLE_ONLY_MANUAL",
+      "environment": "NONEMPTY_OBJECT_VALUE_OR_UNKNOWN_NOT_APPLICABLE_ONLY_MANUAL",
+      "finding": "ARTIFACT_OR_PROCESS_SUPPORT_DECLARED_UNSUPPORTED_ONLY_HYPOTHESIS_WITH_REASON",
+      "report": "NONEMPTY_UNIQUE_CLAIM_IDS_EACH_WITH_FINDING_REFERENCES_AND_DOCUMENT_LOCATOR",
+      "uncertainty": "EXPLICIT_UNKNOWN_WITH_REASON_DOES_NOT_ESTABLISH_RERUN_SUFFICIENCY",
+      "registration": "STRUCTURAL_ADMISSION_DOES_NOT_ESTABLISH_EVIDENCE_OR_CLAIM_TRUTH",
+      "revisionAuthority": "OWNER_OR_CASE_LEAD_WITH_CURRENT_ROLE_AND_TYPE_PERMISSION",
+      "authentication": "TRANSACTION_IDENTITY_ROLE_ATTRIBUTE_AND_DEPLOYMENT_MSP_MAPPING",
+      "initialization": "ASSURANCE_REVIEWER_CREATOR_AND_ASSIGNED_CASE_MEMBERS",
+      "profileChanges": "REQUIRE_IMPLEMENTATION_AND_PROFILE_VERSION_CHANGE",
+      "caseProfiles": "CURRENT_ADMISSION_REQUIRED_OTHER_REFERENCES_EXACT_BUNDLED_ALLOWLIST",
+      "reviewProfiles": "FULL_REFERENCE_MATCH_AND_CASE_AUTHORIZATION_BEFORE_NEW_REVIEW",
+      "reviewSources": "COMMITTED_EXTRA_ROOTS_AND_EXACT_SEALED_TOOL_INPUT_OUTPUT_ENVIRONMENT",
+      "observationChecks": "EXACT_CHECK_IDS_BLOB_DESCRIPTORS_AND_SEALED_EXECUTION_BASIS",
+      "observationAttempt": "CREATE_ONLY_CASE_REQUEST_REVIEWER_ATTEMPT_AFTER_RECEIPT_CHECK",
+      "observationHistory": "ACTUAL_CHANNEL_ALL_MODES_CHECKS_AFTER_BASIS_REJECTION_INDEPENDENT_OF_BAD_BASIS",
+      "legacyWrites": "CURRENT_PROFILE_REQUIRED_NO_IMPLICIT_STATE_MIGRATION",
+      "issues": "CASE_MEMBER_EXACT_MATERIAL_OR_REQUEST_TARGET_WITH_SAME_CASE_SUPPORT",
+      "responses": "CREATOR_OWNER_OR_CASE_LEAD_NO_AUTOMATIC_CLOSURE",
+      "dispositions": "CHALLENGE_ONLY_WITH_AUTHORITY_FRESH_SEQUENCE_AND_NO_SELF_JUDGMENT"
+    }
+  },
+  "reviewPolicy": {
+    "profileKind": "POLICY",
+    "profileID": "pi0-m2",
+    "version": 5,
+    "schemaVersion": "1.0",
+    "stage": "M3_ISSUES_AND_HISTORY",
+    "supportedRecordKinds": [
+      "CASE_CONFIG",
+      "MATERIAL_VERSION",
+      "REVIEW_REQUEST",
+      "PACKAGE_RECORD",
+      "OBSERVATION",
+      "ISSUE",
+      "ISSUE_RESPONSE",
+      "ISSUE_DISPOSITION"
+    ],
+    "bodySchemas": {
+      "review": [
+        "targetRef",
+        "reviewerActorRef",
+        "scope",
+        "checkpointBasis",
+        "policyRef",
+        "verifierSpecRef",
+        "checkPlan",
+        "predecessorRequestRef"
+      ],
+      "package": [
+        "requestRef",
+        "manifestHash",
+        "formatVersion",
+        "declaredExporter"
+      ],
+      "observationCommon": [
+        "intendedRequestRef",
+        "attemptID",
+        "mode",
+        "checkpointHistory",
+        "limitations"
+      ],
+      "observationChecks": [
+        "packageRef",
+        "manifestHash",
+        "binding",
+        "context",
+        "materialResults",
+        "checkResults"
+      ],
+      "observationRejectedInput": [
+        "receivedDigest",
+        "digestKind",
+        "failureCodes",
+        "declaredMetadata"
+      ],
+      "issue": [
+        "issueType",
+        "targetRef",
+        "reasonCode",
+        "rationale",
+        "supportRefs",
+        "associatedRequestRef"
+      ],
+      "issueResponse": [
+        "issueRef",
+        "statement",
+        "supportRefs",
+        "issueSeq",
+        "previousEventRef"
+      ],
+      "issueDisposition": [
+        "issueRef",
+        "expectedIssueSeq",
+        "disposition",
+        "rationale",
+        "supportRefs",
+        "issueSeq",
+        "previousEventRef"
+      ]
+    },
+    "rules": {
+      "scope": "TARGET_FINDING_OR_REPORT_PLUS_EXPLICIT_EXTRA_ROOTS_AND_SEALED_BASIS",
+      "expected": "CASE_CONFIG_MATERIAL_BASIS_ISSUES_AND_EVENTS_AT_CHI_ALL_CASE_PROFILES",
+      "authority": "ASSURANCE_REVIEWER_OPENS_DESIGNATED_INDEPENDENT_REVIEWER_NOT_BASIS_AUTHOR",
+      "packageAuthority": "CASE_FORENSIC_INVESTIGATOR_OR_DESIGNATED_INDEPENDENT_REVIEWER",
+      "observationAuthority": "DESIGNATED_INDEPENDENT_REVIEWER_ONLY",
+      "checkpoint": "BASIS_PRECEDES_REQUEST_HISTORY_INCLUDES_REQUEST_AND_OBSERVED_PACKAGE",
+      "checkPlan": "OPTIONAL_UNIQUE_RERUN_PROCESS_CHECKS_EXACT_TOOL_INPUTS_OUTPUTS_ENVIRONMENT",
+      "comparator": "JSON_CANONICAL_EQUAL",
+      "procedureResult": "ATTRIBUTED_EXECUTION_EVIDENCE_MATCH_MISMATCH_ERROR_OR_NOT_RUN",
+      "materialResult": "HASH_MATCH_HASH_MISMATCH_NOT_OBTAINED_NOT_CHECKED_WITH_REASON",
+      "contextResult": "SATISFIED_UNSATISFIED_NOT_ASSESSABLE_ATTRIBUTED_REVIEWER_ASSERTION",
+      "rejectedInput": "EXISTING_REQUEST_UNIQUE_REVIEWER_ATTEMPT_ACTUAL_CHANNEL_NO_TRUST_IN_REJECTED_BASIS",
+      "profileBinding": "EXACT_KIND_ID_VERSION_DIGEST_AND_CASE_ALLOWLIST",
+      "declarationBinding": "REGISTERED_RECORD_VERSION_SLOT_DIGEST_NOT_PROOF_OF_EXECUTION",
+      "observationCoverage": "ONE_BOUND_RESULT_PER_REQUESTED_CHECK_NO_MISSING_OR_FOREIGN_CHECK",
+      "duplicateAttempt": "ATOMIC_CREATE_ONLY_INDEX_WITH_IDEMPOTENT_OPERATION_RECEIPT",
+      "unsupportedHistory": "FAIL_UNSUPPORTED_ON_UNKNOWN_RECORD_KIND",
+      "issueRelevance": "EXACT_VERSION_ANCESTOR_AT_CHI_OR_REQUEST_LINKED_THROUGH_KAPPA",
+      "issueStatus": "OPEN_ANSWERED_DISPOSITION_WITH_RESPONSE_NOT_AUTOMATIC_CLOSURE",
+      "contextWithIssues": "COMPLETE_REGISTERED_CONTEXT_CAN_BE_SATISFIED_WITH_OPEN_CHALLENGE",
+      "limits": "BOUNDED_REGISTERED_ISSUES_NO_SUBSTANTIVE_TRUTH_CLAIM"
+    }
+  },
+  "verifierSpec": {
+    "profileKind": "VERIFIER",
+    "profileID": "nu0-m2",
+    "version": 5,
+    "schemaVersion": "1.0",
+    "stage": "M3_ISSUES_AND_HISTORY",
+    "packageFormat": "LWFA_PACKAGE_2",
+    "rules": {
+      "authority": "TRUSTED_PEER_VALIDATION_METADATA_FULL_BLOCK_REPLAY_ONLY_VALID_TRANSACTIONS",
+      "chronology": "SEALED_MATERIAL_BIRTH_AT_OR_BEFORE_BASIS_REQUEST_AFTER_BASIS_PACKAGE_AFTER_REQUEST",
+      "expected": "INDEPENDENT_LEDGER_CASE_CONFIG_MATERIAL_ISSUES_AND_EVENTS_AT_CHI_ALL_PROFILES",
+      "omissions": "NEVER_BACKFILL_MISSING_PACKAGE_METADATA_FROM_LEDGER",
+      "binding": "INTENDED_REQUEST_REGISTERED_MANIFEST_TARGET_BASIS_PROFILES_SCOPE_AND_CHECK_PLAN",
+      "disclosure": "MISSING_REQUIRED_METADATA_UNSATISFIED_MISSING_BLOB_NOT_OBTAINED",
+      "history": "ALL_PACKAGES_OBSERVATIONS_BASIS_AND_LINKED_ISSUES_WITH_EVENTS_THROUGH_CUTOFF",
+      "checks": "DOCKER_ALLOWLISTED_SINGLE_BLOB_SINGLE_JSON_OUTPUT_RERUN",
+      "admissionCompatibility": "ALPHA0_V5_PI0_M2_V5_NU0_M2_V5_NO_LEGACY_REQUEST_PROMOTION",
+      "manifestCommitment": "SHA256_RAW_UTF8_MANIFEST_BYTES_CANONICAL_WRITER_NO_WHITESPACE_NORMALIZATION",
+      "inventory": "MANIFEST_AND_DECLARED_FILES_ONLY_NO_SYMLINKS_512_FILES_128_MIB_TOTAL_16_MIB_PER_BLOB",
+      "rejectionHistory": "TRUSTED_ACTUAL_CHANNEL_KAPPA_INCLUDES_REQUEST_WITHOUT_TRUSTING_CHI",
+      "results": "SEPARATE_BINDING_CONTEXT_REFERENCE_MATERIAL_PROCEDURE_AND_HISTORY_NO_OVERALL_VERIFIED",
+      "unknownKinds": "UNSUPPORTED_PROFILE_INSTEAD_OF_SILENT_IGNORE",
+      "limits": "BOUNDED_REGISTERED_HISTORY_NO_PROOF_OF_ORIGINAL_EXECUTION_OR_SUBSTANTIVE_TRUTH"
+    }
+  }
+}
