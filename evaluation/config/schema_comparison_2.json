@@ -1,0 +1,321 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "LWFA_COMPARISON_2",
+  "title": "LWFA_COMPARISON_2 normalized record (satu baris normalized.jsonl = satu rowID x satu profil)",
+  "description": "Schema for LWFA_COMPARISON_2 normalized assessment records. Defines allowed dimension, item, and error properties and the rawOutputRef pattern. Provides the enums used by normalization and validation. Optional dimension fields are populated only when supported by available assessment data.",
+  "x-states": {
+    "PASS": "Dimensi benar-benar dievaluasi dan syaratnya terpenuhi.",
+    "FAIL": "Dimensi dievaluasi dan ditemukan ketidaksesuaian; selalu disertai >=1 hard finding pada dimensi itu.",
+    "NOT_EVALUATED": "Kewajiban di luar profil pemeriksa.",
+    "NOT_ASSESSED": "Kewajiban ada, tetapi tidak dijalankan karena prasyarat gagal atau short-circuit; reason wajib.",
+    "NOT_REPORTED": "Output versi ini tidak melaporkan dimensi secara cukup; tidak boleh dianggap PASS.",
+    "NOT_PRESENTED": "Artefak opsional tidak disajikan; bukan pelanggaran kelengkapan.",
+    "NOT_RUN": "Prosedur eksekusi tidak dijalankan.",
+    "OPERATIONAL_ERROR": "Evaluasi tidak selesai karena kegagalan operasional/program; bukan verdict ilmiah."
+  },
+  "x-dimensions": [
+    "binding",
+    "basisContext",
+    "materialIntegrity",
+    "toolIntegrity",
+    "creatorIdentity",
+    "disclosureCoverage",
+    "presentedDisclosure",
+    "presentedRecordsIntegrity",
+    "authority",
+    "procedure"
+  ],
+  "x-advisoryCodes": [
+    "POST_BASIS_ISSUE_BEFORE_REQUEST",
+    "UNRESOLVED_CHALLENGE_EXCLUDED_BY_CHI",
+    "POST_REQUEST_BASIS_ISSUE_UNLINKED",
+    "UNRESOLVED_PREDECESSOR_CHALLENGE",
+    "UNRESOLVED_EARLIER_VERSION_CHALLENGE",
+    "UNRESOLVED_PRIOR_REVIEW_CHALLENGE"
+  ],
+  "x-profiles": [
+    "T0",
+    "T1",
+    "HB",
+    "T2",
+    "T3"
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "runID",
+    "rowID",
+    "checker",
+    "checkerVersion",
+    "execution",
+    "dimensions",
+    "hardFindings",
+    "advisories",
+    "hardDetected",
+    "advisoryPresent",
+    "anyFinding",
+    "rawOutputRef",
+    "rawOutputSHA256"
+  ],
+  "properties": {
+    "schema": {
+      "const": "LWFA_COMPARISON_2"
+    },
+    "runID": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rowID": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Scenario or assessment identifier from config/rows.json; diagnostics use rowID#label."
+    },
+    "checker": {
+      "enum": [
+        "T0",
+        "T1",
+        "HB",
+        "T2",
+        "T3"
+      ]
+    },
+    "checkerVersion": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Source-lock reference: kit release digest, HashCoC release-files, or harness SHA256SUMS."
+    },
+    "execution": {
+      "enum": [
+        "COMPLETED",
+        "OPERATIONAL_ERROR"
+      ]
+    },
+    "error": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Present only when execution is OPERATIONAL_ERROR: {name, code, message}.",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "code": {
+          "type": [
+            "string",
+            "number",
+            "null"
+          ]
+        },
+        "message": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "binding",
+        "basisContext",
+        "materialIntegrity",
+        "toolIntegrity",
+        "creatorIdentity",
+        "disclosureCoverage",
+        "presentedDisclosure",
+        "presentedRecordsIntegrity",
+        "authority",
+        "procedure"
+      ],
+      "patternProperties": {
+        "^.*$": {
+          "$ref": "#/$defs/dimension"
+        }
+      }
+    },
+    "hardFindings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "advisories": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/advisory"
+      }
+    },
+    "hardDetected": {
+      "type": "boolean",
+      "description": "True when hardFindings is nonempty."
+    },
+    "advisoryPresent": {
+      "type": "boolean",
+      "description": "True when advisories is nonempty."
+    },
+    "anyFinding": {
+      "type": "boolean",
+      "description": "hardDetected OR advisoryPresent; not an evidence acceptance or rejection verdict."
+    },
+    "rawOutputRef": {
+      "type": "string",
+      "pattern": "^(capability|diagnostics)/[A-Za-z0-9._/#-]+\\.json$",
+      "description": "Relative path within the run directory."
+    },
+    "rawOutputSHA256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "$defs": {
+    "dimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_EVALUATED",
+            "NOT_ASSESSED",
+            "NOT_REPORTED",
+            "NOT_PRESENTED",
+            "NOT_RUN",
+            "OPERATIONAL_ERROR"
+          ]
+        },
+        "rawStatus": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scope": {
+          "type": "string"
+        },
+        "checked": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "subject",
+              "rawStatus"
+            ],
+            "properties": {
+              "subject": {
+                "type": "string",
+                "minLength": 1
+              },
+              "rawStatus": {
+                "enum": [
+                  "HASH_MATCH",
+                  "HASH_MISMATCH",
+                  "NOT_OBTAINED"
+                ]
+              }
+            }
+          }
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dimension",
+        "code",
+        "rawReason",
+        "subjectRefs",
+        "missingRefs",
+        "sourcePath"
+      ],
+      "properties": {
+        "dimension": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Normalized code, such as BINDING_MISMATCH, CONTEXT_UNSATISFIED, or MATERIAL_NOT_OBTAINED."
+        },
+        "rawReason": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Original profile reason, preserved unchanged."
+        },
+        "subjectRefs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missingRefs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sourcePath": {
+          "type": "string"
+        }
+      }
+    },
+    "advisory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "subjectRefs",
+        "sourcePath"
+      ],
+      "properties": {
+        "code": {
+          "enum": [
+            "POST_BASIS_ISSUE_BEFORE_REQUEST",
+            "UNRESOLVED_CHALLENGE_EXCLUDED_BY_CHI",
+            "POST_REQUEST_BASIS_ISSUE_UNLINKED",
+            "UNRESOLVED_PREDECESSOR_CHALLENGE",
+            "UNRESOLVED_EARLIER_VERSION_CHALLENGE",
+            "UNRESOLVED_PRIOR_REVIEW_CHALLENGE"
+          ]
+        },
+        "subjectRefs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sourcePath": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,934 @@
+{
+ "format": "LWFA_ROW_REGISTRY_2",
+ "status": "LOCKED_AFTER_REVIEW",
+ "expectedRowCount": 37,
+ "provenance": "Drafted by maintainer/build_registry.js from the ladder package map.js and ladder_summary.py classes; requestRef from archived assessments, packageRecordRef from replayed Org3 snapshots; reviewed and frozen 2026-10-05.",
+ "note": "37 assessment rows: 16 labelled interventions and 21 controls in 18 scenario families of one bounded SecRespond case. Not 37 independent incidents. SR-12 determinism-first/second are a determinism repeat, not a new case.",
+ "rows": [
+  {
+   "rowID": "SR-00/normal",
+   "scenario": "SR-00",
+   "assessment": "normal",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-00/normal-history",
+   "snapshotPath": "cases/SR-00/snapshots/normal-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-00",
+    "commitment": "6e21abc4ee8c4ce67bdf05135213d7e1c582217f4089e908c2091d7ed28fb926",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-00",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "d1c713032a0c77d1751f5a1e870d8cab02b6caa5e96259dd4071d973f0c5ea0c"
+   },
+   "packageRelativePath": "package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-00/assessments/normal.json"
+  },
+  {
+   "rowID": "SR-01/positive-control",
+   "scenario": "SR-01",
+   "assessment": "positive-control",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-01/positive-control-history",
+   "snapshotPath": "cases/SR-01/snapshots/positive-control-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-01",
+    "commitment": "53c3a9fe5f775fa054c9e9b3f65551c3dad4af33d29faec86d94a248c78555b6",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-01",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "1e638bb682051f3dcd49fe6b8b0a11e3a37a3f145adb3f2ebfafa9179d88ed04"
+   },
+   "packageRelativePath": "package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-01/assessments/positive-control.json"
+  },
+  {
+   "rowID": "SR-01/substituted-byte",
+   "scenario": "SR-01",
+   "assessment": "substituted-byte",
+   "kind": "INTERVENTION",
+   "defectClass": "A_PACKAGE_MANIPULATION",
+   "snapshotKey": "SR-01/positive-control-history",
+   "snapshotPath": "cases/SR-01/snapshots/positive-control-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-01",
+    "commitment": "53c3a9fe5f775fa054c9e9b3f65551c3dad4af33d29faec86d94a248c78555b6",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-01",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "1e638bb682051f3dcd49fe6b8b0a11e3a37a3f145adb3f2ebfafa9179d88ed04"
+   },
+   "packageRelativePath": "trial-copies/substituted-cron",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-01/assessments/substituted-byte.json"
+  },
+  {
+   "rowID": "SR-02/revised-basis-control",
+   "scenario": "SR-02",
+   "assessment": "revised-basis-control",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-02/revised-basis-control",
+   "snapshotPath": "cases/SR-02/snapshots/revised-basis-control",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-02",
+    "commitment": "dc6aee9105562d01b8277792b69f3ac096523fcae8bf3bc23b6340e65d3070da",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "revised-basis-review"
+   },
+   "packageRecordID": "revised-basis-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-02",
+    "recordID": "revised-basis-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "a459329ccbd1f1f7aab2cef19c6767316f48c989a9ea1e54dd287fa309e8416f"
+   },
+   "packageRelativePath": "packages/revised-basis-package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-02/assessments/revised-basis-control.json"
+  },
+  {
+   "rowID": "SR-03/wrong-version",
+   "scenario": "SR-03",
+   "assessment": "wrong-version",
+   "kind": "INTERVENTION",
+   "defectClass": "A_PACKAGE_MANIPULATION",
+   "snapshotKey": "SR-03/version-binding-history",
+   "snapshotPath": "cases/SR-03/snapshots/version-binding-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-03",
+    "commitment": "17fa11abd7d1b8cb2c53e226221d291810c574b7bdcf222dbdf34705acd7f9c8",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-v2"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-03",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "f376f4d8a507eb23806b8e185e5ae904492f7dc1ce59018c466ff9b3fdf0deb0"
+   },
+   "packageRelativePath": "package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-03/assessments/wrong-version.json"
+  },
+  {
+   "rowID": "SR-03/correct-version",
+   "scenario": "SR-03",
+   "assessment": "correct-version",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-03/version-binding-history",
+   "snapshotPath": "cases/SR-03/snapshots/version-binding-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-03",
+    "commitment": "17fa11abd7d1b8cb2c53e226221d291810c574b7bdcf222dbdf34705acd7f9c8",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-v2"
+   },
+   "packageRecordID": "package-v2",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-03",
+    "recordID": "package-v2",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "ab04dc2a5f7240eb6562fc89f0dfadb13cfee7755228114575eec86aa08443f0"
+   },
+   "packageRelativePath": "packages/package-v2",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-03/assessments/correct-version.json"
+  },
+  {
+   "rowID": "SR-04/omitted-limitation",
+   "scenario": "SR-04",
+   "assessment": "omitted-limitation",
+   "kind": "INTERVENTION",
+   "defectClass": "A_PACKAGE_MANIPULATION",
+   "snapshotKey": "SR-04/omitted-limitation-history",
+   "snapshotPath": "cases/SR-04/snapshots/omitted-limitation-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-04",
+    "commitment": "9044c3f320720e3436ab8eeb39e07372aff0d40b372d7e278ba55a9b647eddad",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "omitted-limitation-record",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-04",
+    "recordID": "omitted-limitation-record",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "6760e462651aed87e4518e7d7fa26565e19163ff66d003409d3fd15f088e8b51"
+   },
+   "packageRelativePath": "trial-copies/omitted-limitation",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-04/assessments/omitted-limitation.json"
+  },
+  {
+   "rowID": "SR-04/limitation-control",
+   "scenario": "SR-04",
+   "assessment": "limitation-control",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-04/omitted-limitation-history",
+   "snapshotPath": "cases/SR-04/snapshots/omitted-limitation-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-04",
+    "commitment": "9044c3f320720e3436ab8eeb39e07372aff0d40b372d7e278ba55a9b647eddad",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-04",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "160bd2e8b3da3bae8c5b2cd25075c275b91c3af6d945c52c2ec340cdcf7e1dac"
+   },
+   "packageRelativePath": "package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-04/assessments/limitation-control.json"
+  },
+  {
+   "rowID": "SR-05/omitted-challenge",
+   "scenario": "SR-05",
+   "assessment": "omitted-challenge",
+   "kind": "INTERVENTION",
+   "defectClass": "A_PACKAGE_MANIPULATION",
+   "snapshotKey": "SR-05/challenge-history",
+   "snapshotPath": "cases/SR-05/snapshots/challenge-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-05",
+    "commitment": "5cde8238b24ea2e7dd36d4e687d45af8b9cbc493c5bad9bf2853b0bd6b6f0af8",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "omitted-challenge-record",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-05",
+    "recordID": "omitted-challenge-record",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "7f3db7f9b19c4ee906b18140895ef18eafc42858f4b76711016237d6dbbef932"
+   },
+   "packageRelativePath": "trial-copies/omitted-challenge",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-05/assessments/omitted-challenge.json"
+  },
+  {
+   "rowID": "SR-05/history-control",
+   "scenario": "SR-05",
+   "assessment": "history-control",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-05/challenge-history",
+   "snapshotPath": "cases/SR-05/snapshots/challenge-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-05",
+    "commitment": "5cde8238b24ea2e7dd36d4e687d45af8b9cbc493c5bad9bf2853b0bd6b6f0af8",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-05",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "8da5ee56ceab7150e3bf5a97f945dd85ce0d2810a2a2b73f3622c61ec8c1b149"
+   },
+   "packageRelativePath": "package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-05/assessments/history-control.json"
+  },
+  {
+   "rowID": "SR-05/omitted-observation",
+   "scenario": "SR-05",
+   "assessment": "omitted-observation",
+   "kind": "INTERVENTION",
+   "defectClass": "B_DISCLOSURE_OMISSION",
+   "snapshotKey": "SR-05/challenge-history",
+   "snapshotPath": "cases/SR-05/snapshots/challenge-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-05",
+    "commitment": "5cde8238b24ea2e7dd36d4e687d45af8b9cbc493c5bad9bf2853b0bd6b6f0af8",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-05",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "8da5ee56ceab7150e3bf5a97f945dd85ce0d2810a2a2b73f3622c61ec8c1b149"
+   },
+   "packageRelativePath": "package",
+   "presentedDisclosurePath": "presented-history-omission.json",
+   "archivedAssessmentPath": "cases/SR-05/assessments/omitted-observation.json"
+  },
+  {
+   "rowID": "SR-06/shared-source",
+   "scenario": "SR-06",
+   "assessment": "shared-source",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-06/shared-source",
+   "snapshotPath": "cases/SR-06/snapshots/shared-source",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-06",
+    "commitment": "6a9e954e7adff033d0a9c71aafe1c844ac4f0bd49dd0051ffe35801a8577ecdb",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "shared-source-review"
+   },
+   "packageRecordID": "shared-source-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-06",
+    "recordID": "shared-source-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "7f4e6406a2d75f90b1b8f048468b315333563fd66ea59d9db04cc73106783fd4"
+   },
+   "packageRelativePath": "packages/shared-source-package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-06/assessments/shared-source.json"
+  },
+  {
+   "rowID": "SR-07/response-history",
+   "scenario": "SR-07",
+   "assessment": "response-history",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-07/response-history-history",
+   "snapshotPath": "cases/SR-07/snapshots/response-history-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-07",
+    "commitment": "62e467434fef52ede756f080934d998446e384d212aa8ae81240f0238cc73a7d",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-07",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "d74a79d25a402db45ae03083b09959af753668ae3f442e0ba3eb1099e2eed52f"
+   },
+   "packageRelativePath": "package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-07/assessments/response-history.json"
+  },
+  {
+   "rowID": "SR-08/disposition-history",
+   "scenario": "SR-08",
+   "assessment": "disposition-history",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-08/disposition-history-history",
+   "snapshotPath": "cases/SR-08/snapshots/disposition-history-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-08",
+    "commitment": "cfd7d7444913b9a1ea26555c87f68b6c2ce858c2e150fd89f1ef8b1bb9240727",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-08",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "ebc7f02f7a19f8f4d60be4ed1b9567cbae23cb576df46c9c047c33ad689f2175"
+   },
+   "packageRelativePath": "package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-08/assessments/disposition-history.json"
+  },
+  {
+   "rowID": "SR-09/historical-control",
+   "scenario": "SR-09",
+   "assessment": "historical-control",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-09/historical-control-history",
+   "snapshotPath": "cases/SR-09/snapshots/historical-control-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-09",
+    "commitment": "3158db4b482f86494c88df37786429c33476a6bd9f820ec32907a90a12b02df3",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-09",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "41ef0a983382586405a4b952a97208048b8d68b691bc4186bd71e8cd388e137a"
+   },
+   "packageRelativePath": "package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-09/assessments/historical-control.json"
+  },
+  {
+   "rowID": "SR-09/stale-checkpoint",
+   "scenario": "SR-09",
+   "assessment": "stale-checkpoint",
+   "kind": "INTERVENTION",
+   "defectClass": "A_PACKAGE_MANIPULATION",
+   "snapshotKey": "SR-09/current-checkpoint-history",
+   "snapshotPath": "cases/SR-09/snapshots/current-checkpoint-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-09",
+    "commitment": "f28ae91d9ad74a5f9bd2ccdfd257d96348b082fd3fc77438f521e3cd38329fde",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "later-review"
+   },
+   "packageRecordID": "rebound-stale-checkpoint-record",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-09",
+    "recordID": "rebound-stale-checkpoint-record",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "354c3df688fdf7a826f5f20d313642292bf0668e2228e652421a0629655f2f8a"
+   },
+   "packageRelativePath": "trial-copies/rebound-stale-checkpoint",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-09/assessments/stale-checkpoint.json"
+  },
+  {
+   "rowID": "SR-09/current-checkpoint",
+   "scenario": "SR-09",
+   "assessment": "current-checkpoint",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-09/current-checkpoint-history",
+   "snapshotPath": "cases/SR-09/snapshots/current-checkpoint-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-09",
+    "commitment": "f28ae91d9ad74a5f9bd2ccdfd257d96348b082fd3fc77438f521e3cd38329fde",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "later-review"
+   },
+   "packageRecordID": "current-checkpoint-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-09",
+    "recordID": "current-checkpoint-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "cd6f4163285ae1a9bf268579702cafb2c496998e32a31ed26725fa4792d6e7fa"
+   },
+   "packageRelativePath": "packages/current-checkpoint-package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-09/assessments/current-checkpoint.json"
+  },
+  {
+   "rowID": "SR-09/historical-replay",
+   "scenario": "SR-09",
+   "assessment": "historical-replay",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-09/historical-control-history",
+   "snapshotPath": "cases/SR-09/snapshots/historical-control-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-09",
+    "commitment": "3158db4b482f86494c88df37786429c33476a6bd9f820ec32907a90a12b02df3",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-09",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "41ef0a983382586405a4b952a97208048b8d68b691bc4186bd71e8cd388e137a"
+   },
+   "packageRelativePath": "package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-09/assessments/historical-replay.json"
+  },
+  {
+   "rowID": "SR-10/availability-control",
+   "scenario": "SR-10",
+   "assessment": "availability-control",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-10/availability-control-history",
+   "snapshotPath": "cases/SR-10/snapshots/availability-control-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-10",
+    "commitment": "3c83d95b787369032fe1af2fc0972cf6369f3a069cd6ed87c60f02edc25f47f0",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-10",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "3c071363dcf090f9c6278e3cc38562a14449ca079213b38aa07afad8d11183a6"
+   },
+   "packageRelativePath": "package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-10/assessments/availability-control.json"
+  },
+  {
+   "rowID": "SR-10/missing-bytes",
+   "scenario": "SR-10",
+   "assessment": "missing-bytes",
+   "kind": "INTERVENTION",
+   "defectClass": "A_PACKAGE_MANIPULATION",
+   "snapshotKey": "SR-10/availability-control-history",
+   "snapshotPath": "cases/SR-10/snapshots/availability-control-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-10",
+    "commitment": "3c83d95b787369032fe1af2fc0972cf6369f3a069cd6ed87c60f02edc25f47f0",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-10",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "3c071363dcf090f9c6278e3cc38562a14449ca079213b38aa07afad8d11183a6"
+   },
+   "packageRelativePath": "trial-copies/missing-bashrc",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-10/assessments/missing-bytes.json"
+  },
+  {
+   "rowID": "SR-11/unrelated-branch",
+   "scenario": "SR-11",
+   "assessment": "unrelated-branch",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-11/unrelated-branch",
+   "snapshotPath": "cases/SR-11/snapshots/unrelated-branch",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-11",
+    "commitment": "6632ce3aa0ade503169dda7ba54300757d1899a1422cb44375d78f95333b7435",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "scope-review"
+   },
+   "packageRecordID": "scope-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-11",
+    "recordID": "scope-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "bd1853ef18d6ff8001a04cb79b50b289b9bad1ba7ca1631a5e6e8787012d6d92"
+   },
+   "packageRelativePath": "packages/scope-package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-11/assessments/unrelated-branch.json"
+  },
+  {
+   "rowID": "SR-12/determinism-first",
+   "scenario": "SR-12",
+   "assessment": "determinism-first",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-12/determinism-history",
+   "snapshotPath": "cases/SR-12/snapshots/determinism-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-12",
+    "commitment": "474deb7c91b37082fdda82517936fd48ec783750e91e167a3a4fb0f7dfb382f2",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-12",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "ca7e077a2ea7273db593a52c1020f312af3682bc302cf655a7c71cac90030710"
+   },
+   "packageRelativePath": "package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-12/assessments/determinism-first.json"
+  },
+  {
+   "rowID": "SR-12/determinism-second",
+   "scenario": "SR-12",
+   "assessment": "determinism-second",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-12/determinism-history",
+   "snapshotPath": "cases/SR-12/snapshots/determinism-history",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-12",
+    "commitment": "474deb7c91b37082fdda82517936fd48ec783750e91e167a3a4fb0f7dfb382f2",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "review-request"
+   },
+   "packageRecordID": "review-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-12",
+    "recordID": "review-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "ca7e077a2ea7273db593a52c1020f312af3682bc302cf655a7c71cac90030710"
+   },
+   "packageRelativePath": "package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-12/assessments/determinism-second.json"
+  },
+  {
+   "rowID": "SR-13/sr13-stale-package-assessment",
+   "scenario": "SR-13",
+   "assessment": "sr13-stale-package-assessment",
+   "kind": "INTERVENTION",
+   "defectClass": "C_HONEST_PACKAGE_OUTSTANDING_CONCERN",
+   "snapshotKey": "SR-13/sr13-stale-package-assessment",
+   "snapshotPath": "cases/SR-13/snapshots/sr13-stale-package-assessment",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-13",
+    "commitment": "4a7acbca6c9cd90321ef331e9cc7affd29f9c64a7662964de431b405c4a52785",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "sr13-stale-request"
+   },
+   "packageRecordID": "sr13-stale-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-13",
+    "recordID": "sr13-stale-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "11b20fabe7430fcc2431c549ba79e43c8f88021864fe80252038847da93b1ec9"
+   },
+   "packageRelativePath": "packages/sr13-stale-package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-13/assessments/sr13-stale-package-assessment.json"
+  },
+  {
+   "rowID": "SR-13/sr13-fresh-package-assessment",
+   "scenario": "SR-13",
+   "assessment": "sr13-fresh-package-assessment",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-13/sr13-fresh-package-assessment",
+   "snapshotPath": "cases/SR-13/snapshots/sr13-fresh-package-assessment",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-13",
+    "commitment": "b811f5cc4929a006717a9e9fc9ce251ae894ada840fca23e452476abf4d9272f",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "sr13-fresh-request"
+   },
+   "packageRecordID": "sr13-fresh-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-13",
+    "recordID": "sr13-fresh-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "d678adeb1048a6cb611c63718ccac26605e4411ffd2fa4fb656e54c9f4f1ab05"
+   },
+   "packageRelativePath": "packages/sr13-fresh-package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-13/assessments/sr13-fresh-package-assessment.json"
+  },
+  {
+   "rowID": "SR-13b/sr13b-current",
+   "scenario": "SR-13b",
+   "assessment": "sr13b-current",
+   "kind": "INTERVENTION",
+   "defectClass": "C_HONEST_PACKAGE_OUTSTANDING_CONCERN",
+   "snapshotKey": "SR-13b/sr13b-current-endpoint",
+   "snapshotPath": "cases/SR-13b/snapshots/sr13b-current-endpoint",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-13b",
+    "commitment": "5d31eeb9b2bcf723e64f991d5fafb4ee75f0e545c8d5c0d3fb2cc5cb2c6e8858",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "sr13b-request"
+   },
+   "packageRecordID": "sr13b-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-13b",
+    "recordID": "sr13b-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "2122549b9e0db1431bffb37c06b47fc53806fa83d9268940d3d8dc591bffb66f"
+   },
+   "packageRelativePath": "packages/sr13b-package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-13b/assessments/sr13b-current.json"
+  },
+  {
+   "rowID": "SR-13b/sr13b-omission",
+   "scenario": "SR-13b",
+   "assessment": "sr13b-omission",
+   "kind": "INTERVENTION",
+   "defectClass": "B_DISCLOSURE_OMISSION",
+   "snapshotKey": "SR-13b/sr13b-current-endpoint",
+   "snapshotPath": "cases/SR-13b/snapshots/sr13b-current-endpoint",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-13b",
+    "commitment": "5d31eeb9b2bcf723e64f991d5fafb4ee75f0e545c8d5c0d3fb2cc5cb2c6e8858",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "sr13b-request"
+   },
+   "packageRecordID": "sr13b-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-13b",
+    "recordID": "sr13b-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "2122549b9e0db1431bffb37c06b47fc53806fa83d9268940d3d8dc591bffb66f"
+   },
+   "packageRelativePath": "packages/sr13b-package",
+   "presentedDisclosurePath": "sr13b-presented-omission.json",
+   "archivedAssessmentPath": "cases/SR-13b/assessments/sr13b-omission.json"
+  },
+  {
+   "rowID": "SR-13b/sr13b-historical-control",
+   "scenario": "SR-13b",
+   "assessment": "sr13b-historical-control",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-13b/sr13b-historical-endpoint",
+   "snapshotPath": "cases/SR-13b/snapshots/sr13b-historical-endpoint",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-13b",
+    "commitment": "5d31eeb9b2bcf723e64f991d5fafb4ee75f0e545c8d5c0d3fb2cc5cb2c6e8858",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "sr13b-request"
+   },
+   "packageRecordID": "sr13b-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-13b",
+    "recordID": "sr13b-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "2122549b9e0db1431bffb37c06b47fc53806fa83d9268940d3d8dc591bffb66f"
+   },
+   "packageRelativePath": "packages/sr13b-package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-13b/assessments/sr13b-historical-control.json"
+  },
+  {
+   "rowID": "SR-14/sr14-v2-package-assessment",
+   "scenario": "SR-14",
+   "assessment": "sr14-v2-package-assessment",
+   "kind": "INTERVENTION",
+   "defectClass": "C_HONEST_PACKAGE_OUTSTANDING_CONCERN",
+   "snapshotKey": "SR-14/sr14-v2-package-assessment",
+   "snapshotPath": "cases/SR-14/snapshots/sr14-v2-package-assessment",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-14",
+    "commitment": "9bf2ad47f36922e37fb508e7b012bf1eb14761e41ec6447692ca2dd2f782b05a",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "sr14-v2-request"
+   },
+   "packageRecordID": "sr14-v2-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-14",
+    "recordID": "sr14-v2-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "54694408b264aad320a8704593c4a5b89ba4150d22b6b3054ee0f81d836e9b42"
+   },
+   "packageRelativePath": "packages/sr14-v2-package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-14/assessments/sr14-v2-package-assessment.json"
+  },
+  {
+   "rowID": "SR-14/sr14-disposed-control",
+   "scenario": "SR-14",
+   "assessment": "sr14-disposed-control",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-14/sr14-disposed-control",
+   "snapshotPath": "cases/SR-14/snapshots/sr14-disposed-control",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-14",
+    "commitment": "9bf2ad47f36922e37fb508e7b012bf1eb14761e41ec6447692ca2dd2f782b05a",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "sr14-v2-request"
+   },
+   "packageRecordID": "sr14-v2-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-14",
+    "recordID": "sr14-v2-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "54694408b264aad320a8704593c4a5b89ba4150d22b6b3054ee0f81d836e9b42"
+   },
+   "packageRelativePath": "packages/sr14-v2-package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-14/assessments/sr14-disposed-control.json"
+  },
+  {
+   "rowID": "SR-14b/sr14b-v3-package-assessment",
+   "scenario": "SR-14b",
+   "assessment": "sr14b-v3-package-assessment",
+   "kind": "INTERVENTION",
+   "defectClass": "C_HONEST_PACKAGE_OUTSTANDING_CONCERN",
+   "snapshotKey": "SR-14b/sr14b-v3-package-assessment",
+   "snapshotPath": "cases/SR-14b/snapshots/sr14b-v3-package-assessment",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-14b",
+    "commitment": "883591446c89b3006c515ec715aa23c61f44e30bab32afed07f21dc03df9ffc8",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "sr14b-v3-request"
+   },
+   "packageRecordID": "sr14b-v3-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-14b",
+    "recordID": "sr14b-v3-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "106b337ab89eff972dd961092b68115ce0e10f431abcde20f1015f1d2fbf7767"
+   },
+   "packageRelativePath": "packages/sr14b-v3-package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-14b/assessments/sr14b-v3-package-assessment.json"
+  },
+  {
+   "rowID": "SR-16/sr16-prior-package-assessment",
+   "scenario": "SR-16",
+   "assessment": "sr16-prior-package-assessment",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-16/sr16-prior-package-assessment",
+   "snapshotPath": "cases/SR-16/snapshots/sr16-prior-package-assessment",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-16",
+    "commitment": "fc8bf838ba7c344ebb20e7e50072963215b96f644bc6b3c9c7873f5f3f8b0012",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "sr16-prior-request"
+   },
+   "packageRecordID": "sr16-prior-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-16",
+    "recordID": "sr16-prior-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "3a50710f7a549ee509157eeaef407f8403ed41836eea665a25069d7cf3b600ff"
+   },
+   "packageRelativePath": "packages/sr16-prior-package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-16/assessments/sr16-prior-package-assessment.json"
+  },
+  {
+   "rowID": "SR-16/sr16-unresolved",
+   "scenario": "SR-16",
+   "assessment": "sr16-unresolved",
+   "kind": "INTERVENTION",
+   "defectClass": "C_HONEST_PACKAGE_OUTSTANDING_CONCERN",
+   "snapshotKey": "SR-16/sr16-unresolved-endpoint",
+   "snapshotPath": "cases/SR-16/snapshots/sr16-unresolved-endpoint",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-16",
+    "commitment": "83be3fb87c26f57bf255d0733da7d75558a50945d447370cb6b8dca8897001f2",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "sr16-unlinked-request"
+   },
+   "packageRecordID": "sr16-new-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-16",
+    "recordID": "sr16-new-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "e49f32a3867f362a43260c94345acf972ae3938a28006bc4e258bd43d4280191"
+   },
+   "packageRelativePath": "packages/sr16-new-package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-16/assessments/sr16-unresolved.json"
+  },
+  {
+   "rowID": "SR-16/sr16-omission-sr16-prior-request",
+   "scenario": "SR-16",
+   "assessment": "sr16-omission-sr16-prior-request",
+   "kind": "INTERVENTION",
+   "defectClass": "B_DISCLOSURE_OMISSION",
+   "snapshotKey": "SR-16/sr16-unresolved-endpoint",
+   "snapshotPath": "cases/SR-16/snapshots/sr16-unresolved-endpoint",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-16",
+    "commitment": "83be3fb87c26f57bf255d0733da7d75558a50945d447370cb6b8dca8897001f2",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "sr16-unlinked-request"
+   },
+   "packageRecordID": "sr16-new-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-16",
+    "recordID": "sr16-new-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "e49f32a3867f362a43260c94345acf972ae3938a28006bc4e258bd43d4280191"
+   },
+   "packageRelativePath": "packages/sr16-new-package",
+   "presentedDisclosurePath": "sr16-omitted-sr16-prior-request.json",
+   "archivedAssessmentPath": "cases/SR-16/assessments/sr16-omission-sr16-prior-request.json"
+  },
+  {
+   "rowID": "SR-16/sr16-omission-sr16-prior-observation",
+   "scenario": "SR-16",
+   "assessment": "sr16-omission-sr16-prior-observation",
+   "kind": "INTERVENTION",
+   "defectClass": "B_DISCLOSURE_OMISSION",
+   "snapshotKey": "SR-16/sr16-unresolved-endpoint",
+   "snapshotPath": "cases/SR-16/snapshots/sr16-unresolved-endpoint",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-16",
+    "commitment": "83be3fb87c26f57bf255d0733da7d75558a50945d447370cb6b8dca8897001f2",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "sr16-unlinked-request"
+   },
+   "packageRecordID": "sr16-new-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-16",
+    "recordID": "sr16-new-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "e49f32a3867f362a43260c94345acf972ae3938a28006bc4e258bd43d4280191"
+   },
+   "packageRelativePath": "packages/sr16-new-package",
+   "presentedDisclosurePath": "sr16-omitted-sr16-prior-observation.json",
+   "archivedAssessmentPath": "cases/SR-16/assessments/sr16-omission-sr16-prior-observation.json"
+  },
+  {
+   "rowID": "SR-16/sr16-omission-sr16-prior-review-challenge",
+   "scenario": "SR-16",
+   "assessment": "sr16-omission-sr16-prior-review-challenge",
+   "kind": "INTERVENTION",
+   "defectClass": "B_DISCLOSURE_OMISSION",
+   "snapshotKey": "SR-16/sr16-unresolved-endpoint",
+   "snapshotPath": "cases/SR-16/snapshots/sr16-unresolved-endpoint",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-16",
+    "commitment": "83be3fb87c26f57bf255d0733da7d75558a50945d447370cb6b8dca8897001f2",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "sr16-unlinked-request"
+   },
+   "packageRecordID": "sr16-new-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-16",
+    "recordID": "sr16-new-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "e49f32a3867f362a43260c94345acf972ae3938a28006bc4e258bd43d4280191"
+   },
+   "packageRelativePath": "packages/sr16-new-package",
+   "presentedDisclosurePath": "sr16-omitted-sr16-prior-review-challenge.json",
+   "archivedAssessmentPath": "cases/SR-16/assessments/sr16-omission-sr16-prior-review-challenge.json"
+  },
+  {
+   "rowID": "SR-16/sr16-disposed-control",
+   "scenario": "SR-16",
+   "assessment": "sr16-disposed-control",
+   "kind": "CONTROL",
+   "defectClass": "CONTROL",
+   "snapshotKey": "SR-16/sr16-disposed-control",
+   "snapshotPath": "cases/SR-16/snapshots/sr16-disposed-control",
+   "requestRef": {
+    "caseID": "SR-pc20261002T014736-SR-16",
+    "commitment": "83be3fb87c26f57bf255d0733da7d75558a50945d447370cb6b8dca8897001f2",
+    "kind": "REVIEW_REQUEST",
+    "recordID": "sr16-unlinked-request"
+   },
+   "packageRecordID": "sr16-new-package",
+   "packageRecordRef": {
+    "caseID": "SR-pc20261002T014736-SR-16",
+    "recordID": "sr16-new-package",
+    "kind": "PACKAGE_RECORD",
+    "commitment": "e49f32a3867f362a43260c94345acf972ae3938a28006bc4e258bd43d4280191"
+   },
+   "packageRelativePath": "packages/sr16-new-package",
+   "presentedDisclosurePath": null,
+   "archivedAssessmentPath": "cases/SR-16/assessments/sr16-disposed-control.json"
+  }
+ ]
+}

@@ -1,0 +1,101 @@
+{
+  "format": "LWFA_RUN_CONTRACT_2",
+  "harnessVersion": "2.2",
+  "note": "This contract defines the required output files. Optional stages excluded from the run have status NOT_REQUESTED and no output directory. Each requested stage has a stage-manifest.json with the matching runID and an exact inventory of its output directory.",
+  "rootFiles": [
+    "run-receipt.json",
+    "run_all.log",
+    "source-lock.json",
+    "input-lock-before.json",
+    "registry-snapshot.json",
+    "input-lock-after.json",
+    "source-lock-after.json"
+  ],
+  "rootFilesAfterComplete": [
+    "validation.json"
+  ],
+  "receiptRootFiles": [
+    "source-lock.json",
+    "input-lock-before.json",
+    "registry-snapshot.json",
+    "input-lock-after.json",
+    "source-lock-after.json",
+    "validation.json"
+  ],
+  "receiptRootFilesNote": "v2.2: satu definisi untuk receipt.js (receipt complete) dan gate.py (S02.receipt.rootFiles): daftar persis, tanpa duplikat atau tambahan. run-receipt.json tidak dapat mengikat hash dirinya sendiri, dan run_all.log masih ditulis sesudah receipt complete, jadi keduanya di luar daftar ini.",
+  "stages": {
+    "capability": {
+      "requestedBy": "selalu",
+      "mandatoryFiles": [
+        "normalized.jsonl",
+        "profile_table.csv",
+        "dimension_states.csv",
+        "class_summary.json",
+        "cumulative_union.json",
+        "obligation_matrix.csv",
+        "replay_diffs.json",
+        "replay_receipt.json",
+        "requirements_check.json",
+        "compat/rq2_tier_ablation_offline_replay.csv",
+        "compat/hashcoc_vs_tiers.csv",
+        "compat/compat_check.json",
+        "hb_vs_frozen_comparison.json",
+        "hb_frozen_reference.csv"
+      ],
+      "rawPattern": "raw/{rowKey}/{checker}.json",
+      "archivedPattern": "archived/{rowKey}.json"
+    },
+    "diagnostics": {
+      "requestedBy": "selalu",
+      "mandatoryFiles": [
+        "summary.json",
+        "identity-scope/identity_scope.csv",
+        "identity-scope/identity_scope_detail.csv",
+        "identity-scope/summary.json",
+        "identity-outside-D/manifest.json",
+        "identity-outside-D/result.json",
+        "identity-outside-D/raw/control-unchanged/HB.json",
+        "identity-outside-D/raw/control-unchanged/T3.json",
+        "identity-outside-D/raw/treatment-outside-D/HB.json",
+        "identity-outside-D/raw/treatment-outside-D/T3.json",
+        "identity-outside-D/raw/positive-inside-D/HB.json",
+        "identity-outside-D/raw/positive-inside-D/T3.json",
+        "identity-outside-D/normalized/control-unchanged.jsonl",
+        "identity-outside-D/normalized/treatment-outside-D.jsonl",
+        "identity-outside-D/normalized/positive-inside-D.jsonl",
+        "missing-tool/manifest.json",
+        "missing-tool/result.json",
+        "missing-tool/raw/control-copy/HB.json",
+        "missing-tool/raw/control-copy/T3.json",
+        "missing-tool/raw/treatment-missing-tool/T0.json",
+        "missing-tool/raw/treatment-missing-tool/T1.json",
+        "missing-tool/raw/treatment-missing-tool/HB.json",
+        "missing-tool/raw/treatment-missing-tool/T2.json",
+        "missing-tool/raw/treatment-missing-tool/T3.json",
+        "missing-tool/normalized/control-copy.jsonl",
+        "missing-tool/normalized/treatment-missing-tool.jsonl"
+      ]
+    },
+    "bench": {
+      "requestedBy": "RUN_BENCH=1",
+      "mandatoryFiles": [
+        "bench_raw.csv",
+        "bench_env.json",
+        "bench_validation.json",
+        "bench_summary.csv",
+        "bench_pairwise.csv",
+        "bench_combined_estimate.csv",
+        "bench_summary.json"
+      ]
+    },
+    "cadence": {
+      "requestedBy": "FIGURE1_DIR",
+      "mandatoryFiles": [
+        "figure1_block_cadence.csv",
+        "summary.txt",
+        "figure1-input-lock-before.json",
+        "figure1-input-lock-after.json"
+      ]
+    }
+  }
+}

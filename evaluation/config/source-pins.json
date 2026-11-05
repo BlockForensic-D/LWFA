@@ -1,0 +1,55 @@
+{
+  "format": "LWFA_SOURCE_PINS_2",
+  "note": "Full SHA-256 digests enforce dependency matching. Original release locks are preserved and referenced as frozen dependencies.",
+  "kit": {
+    "release": "LWFA_PCC_Evaluation_v081 (zip 05a7d5a75481d161cdab14f9b3f4585cbc62a3ac94e9e79a25ade03e2d031525)",
+    "releaseManifest": "RELEASE_SHA256.json",
+    "releaseManifestSHA256": "45ce4ed4d77d45a68c928538d801deb7fb3a3a75fb4a1c7fcbcd88a37b67ec4d",
+    "expectationsSHA256": "bf50c919a6be8f5bbe82d9d76bbea2b3ec4b64202ab349c36478f21ac35b1412",
+    "moduleDirs": [
+      "disclosure/lib",
+      "adapter/vendor/lwfa-v0.5.1/client",
+      "adapter/vendor/lwfa-v0.5.1/chaincode",
+      "adapter/reference",
+      "adapter/experiments"
+    ],
+    "dependencyLock": "disclosure/package-lock.json",
+    "dependencyLockSHA256": "edb83048733bcf9f7b240aaf3b8b3661147fd2789e8d6ae78570898295f552c3",
+    "fabricShimVersion": "2.5.8"
+  },
+  "hashcoc": {
+    "release": "LWFA_HashCoC_Comparison_v010 (milik peneliti)",
+    "releaseFiles": "release-files.json",
+    "releaseFilesSHA256": "5135cc4e0108c9e2e0af3434a00638a971ca9b212a73282b206c72a73f45846d",
+    "sourceOriginSHA256": "73d57a3cfd0b10e5ec0bc18f5d290447ded43b11ca511d675c4c302f99a3cba4",
+    "baselineSHA256": "d7bf408d0e7535395f41ec6ec1a80ae592df146107a19433839c2600cb37062b",
+    "frozenComparison": "results/offline-20261005/comparison.csv",
+    "frozenComparisonSHA256": "2203436522c11693205304fb42dc192f1aa4e6c6361bca6a0903cb0cccc7f66d",
+    "moduleDirs": [
+      "lib",
+      "bin",
+      "vendor"
+    ]
+  },
+  "vendorEquivalence": [
+    {
+      "hc": "vendor/core",
+      "kit": "adapter/vendor/lwfa-v0.5.1"
+    },
+    {
+      "hc": "vendor/disclosure",
+      "kit": "disclosure"
+    }
+  ],
+  "campaign": {
+    "name": "pcc-full-pc20261002T014736",
+    "archiveSHA256": "ccc6b1b59271241396dde840dbb4e19c446aefc35e13b0a5b8a40e08d81c2884",
+    "inventorySHA256": "38db36d826a0a140ff6e794fe1f3ca6d4e67ebf4e93b35bf68474717f13cd255",
+    "fileCount": 20894,
+    "inventorySource": "HashCoC v010 results/offline-20261005/input-lock.json dan summary.json (sourceCampaignSHA256)"
+  },
+  "runtime": {
+    "nodeMin": "20.19.0",
+    "pythonMin": "3.8"
+  }
+}

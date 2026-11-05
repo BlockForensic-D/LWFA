@@ -1,0 +1,3382 @@
+{
+  "format": "LWFA_EXPECTED_OUTCOMES_2",
+  "status": "FROZEN_AFTER_REVIEW",
+  "meaning": "Exact expected outcomes for each assessment row and verification profile using frozen PCC v0.8.1 inputs. Includes dimension states, hard findings encoded as dimension|code|rawReason|subjectRefs|missingRefs, and advisories encoded as code|subjectRefs. These reproduction targets were cross-checked against requirements.json, legacy ladder results, and the frozen 24-pair HashCoC comparison. They are not an independent oracle.",
+  "draftedFrom": {
+    "runID": "test2",
+    "normalizedSHA256": "9a1f739b90f8dfa1a5156afa61d263ff3d9c81e656600f69c6af6e2cae67d920"
+  },
+  "classCounts": {
+    "source": "Panduan Perbaikan §2.2 (definisi: jumlah baris dengan >=1 hard finding; T3 any = hard OR advisory)",
+    "classes": {
+      "A_PACKAGE_MANIPULATION": {
+        "n": 6,
+        "hard": {
+          "T0": 2,
+          "T1": 4,
+          "HB": 4,
+          "T2": 6,
+          "T3": 6
+        },
+        "anyT3": 6
+      },
+      "B_DISCLOSURE_OMISSION": {
+        "n": 5,
+        "hard": {
+          "T0": 0,
+          "T1": 0,
+          "HB": 0,
+          "T2": 0,
+          "T3": 5
+        },
+        "anyT3": 5
+      },
+      "C_HONEST_PACKAGE_OUTSTANDING_CONCERN": {
+        "n": 5,
+        "hard": {
+          "T0": 0,
+          "T1": 0,
+          "HB": 0,
+          "T2": 0,
+          "T3": 0
+        },
+        "anyT3": 5
+      },
+      "CONTROL": {
+        "n": 21,
+        "hard": {
+          "T0": 0,
+          "T1": 0,
+          "HB": 0,
+          "T2": 0,
+          "T3": 0
+        },
+        "anyT3": 2
+      }
+    }
+  },
+  "identityScope": {
+    "source": "Audit cakupan identitas 5 Okt (paket ladder) dan identity_scope.csv lama; dihitung ulang tiap run oleh diagnostics.js",
+    "values": {
+      "assessments": 37,
+      "P_subset_D": 36,
+      "D_equals_required": 37,
+      "T3_creatorBound": 37,
+      "withRecordsOutsideD": 19,
+      "occurrencesOutsideD": 109,
+      "uniqueSnapshotRecordPairsOutsideD": 82,
+      "uniqueCaseRecordsOutsideD": 52
+    }
+  },
+  "controlAdvisories": {
+    "source": "Panduan §2.2 dan R05",
+    "rows": {
+      "SR-03/correct-version": [
+        "UNRESOLVED_PREDECESSOR_CHALLENGE"
+      ],
+      "SR-06/shared-source": [
+        "UNRESOLVED_PREDECESSOR_CHALLENGE"
+      ]
+    }
+  },
+  "outcomes": {
+    "SR-00/normal": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-01/positive-control": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-01/substituted-byte": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "FAIL",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "materialIntegrity|MATERIAL_HASH_MISMATCH|HASH_MISMATCH|artifact-cron/v1/source|"
+        ],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "FAIL",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "materialIntegrity|MATERIAL_HASH_MISMATCH|HASH_MISMATCH|artifact-cron/v1/source|"
+        ],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "FAIL",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "materialIntegrity|MATERIAL_HASH_MISMATCH|HASH_MISMATCH|artifact-cron/v1/source|"
+        ],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "FAIL",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "materialIntegrity|MATERIAL_HASH_MISMATCH|HASH_MISMATCH|artifact-cron/v1/source|"
+        ],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "FAIL",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "materialIntegrity|MATERIAL_HASH_MISMATCH|HASH_MISMATCH|artifact-cron/v1/source|"
+        ],
+        "advisories": []
+      }
+    },
+    "SR-02/revised-basis-control": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-03/wrong-version": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "FAIL",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "NOT_ASSESSED",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "binding|BINDING_MISMATCH|PACKAGE_REQUEST_MISMATCH||"
+        ],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "FAIL",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "NOT_ASSESSED",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "binding|BINDING_MISMATCH|PACKAGE_REQUEST_MISMATCH||"
+        ],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "FAIL",
+          "basisContext": "NOT_ASSESSED",
+          "materialIntegrity": "NOT_ASSESSED",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "binding|BINDING_MISMATCH|PACKAGE_REQUEST_MISMATCH||"
+        ],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "FAIL",
+          "basisContext": "NOT_ASSESSED",
+          "materialIntegrity": "NOT_ASSESSED",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "binding|BINDING_MISMATCH|PACKAGE_REQUEST_MISMATCH||"
+        ],
+        "advisories": [
+          "UNRESOLVED_PREDECESSOR_CHALLENGE|challenge-runtime"
+        ]
+      }
+    },
+    "SR-03/correct-version": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": [
+          "UNRESOLVED_PREDECESSOR_CHALLENGE|challenge-runtime"
+        ]
+      }
+    },
+    "SR-04/omitted-limitation": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "FAIL",
+          "materialIntegrity": "NOT_ASSESSED",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "basisContext|CONTEXT_UNSATISFIED|PACKAGE_ISSUE_CONTEXT_MISSING_OR_DIFFERENT||limit-acquisition"
+        ],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "FAIL",
+          "materialIntegrity": "NOT_ASSESSED",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "basisContext|CONTEXT_UNSATISFIED|PACKAGE_ISSUE_CONTEXT_MISSING_OR_DIFFERENT||limit-acquisition"
+        ],
+        "advisories": []
+      }
+    },
+    "SR-04/limitation-control": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-05/omitted-challenge": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "FAIL",
+          "materialIntegrity": "NOT_ASSESSED",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "basisContext|CONTEXT_UNSATISFIED|PACKAGE_ISSUE_CONTEXT_MISSING_OR_DIFFERENT||challenge-runtime"
+        ],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "FAIL",
+          "materialIntegrity": "NOT_ASSESSED",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "basisContext|CONTEXT_UNSATISFIED|PACKAGE_ISSUE_CONTEXT_MISSING_OR_DIFFERENT||challenge-runtime"
+        ],
+        "advisories": []
+      }
+    },
+    "SR-05/history-control": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-05/omitted-observation": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "PASS",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "FAIL",
+          "presentedRecordsIntegrity": "PASS",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "presentedDisclosure|PRESENTED_DISCLOSURE_INCOMPLETE|requiredRecords||review-observation"
+        ],
+        "advisories": []
+      }
+    },
+    "SR-06/shared-source": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": [
+          "UNRESOLVED_PREDECESSOR_CHALLENGE|challenge-runtime"
+        ]
+      }
+    },
+    "SR-07/response-history": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-08/disposition-history": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-09/historical-control": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-09/stale-checkpoint": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "FAIL",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "NOT_ASSESSED",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "binding|BINDING_MISMATCH|MANIFEST_checkpointBasis_MISMATCH||"
+        ],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "FAIL",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "NOT_ASSESSED",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "binding|BINDING_MISMATCH|MANIFEST_checkpointBasis_MISMATCH||"
+        ],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "FAIL",
+          "basisContext": "NOT_ASSESSED",
+          "materialIntegrity": "NOT_ASSESSED",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "binding|BINDING_MISMATCH|MANIFEST_checkpointBasis_MISMATCH||"
+        ],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "FAIL",
+          "basisContext": "NOT_ASSESSED",
+          "materialIntegrity": "NOT_ASSESSED",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "binding|BINDING_MISMATCH|MANIFEST_checkpointBasis_MISMATCH||"
+        ],
+        "advisories": []
+      }
+    },
+    "SR-09/current-checkpoint": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-09/historical-replay": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-10/availability-control": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-10/missing-bytes": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "FAIL",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "materialIntegrity|MATERIAL_NOT_OBTAINED|NOT_OBTAINED|artifact-bashrc/v1/source|"
+        ],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "FAIL",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "materialIntegrity|MATERIAL_NOT_OBTAINED|NOT_OBTAINED|artifact-bashrc/v1/source|"
+        ],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "FAIL",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "materialIntegrity|MATERIAL_NOT_OBTAINED|NOT_OBTAINED|artifact-bashrc/v1/source|"
+        ],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "FAIL",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "materialIntegrity|MATERIAL_NOT_OBTAINED|NOT_OBTAINED|artifact-bashrc/v1/source|"
+        ],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "FAIL",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "materialIntegrity|MATERIAL_NOT_OBTAINED|NOT_OBTAINED|artifact-bashrc/v1/source|"
+        ],
+        "advisories": []
+      }
+    },
+    "SR-11/unrelated-branch": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-12/determinism-first": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-12/determinism-second": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "PASS",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-13/sr13-stale-package-assessment": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": [
+          "POST_BASIS_ISSUE_BEFORE_REQUEST|sr13-late-challenge",
+          "UNRESOLVED_CHALLENGE_EXCLUDED_BY_CHI|sr13-late-challenge"
+        ]
+      }
+    },
+    "SR-13/sr13-fresh-package-assessment": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-13b/sr13b-current": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": [
+          "POST_REQUEST_BASIS_ISSUE_UNLINKED|sr13b-unlinked-challenge"
+        ]
+      }
+    },
+    "SR-13b/sr13b-omission": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "PASS",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "FAIL",
+          "presentedRecordsIntegrity": "PASS",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "presentedDisclosure|PRESENTED_DISCLOSURE_INCOMPLETE|requiredRecords||sr13b-unlinked-challenge"
+        ],
+        "advisories": [
+          "POST_REQUEST_BASIS_ISSUE_UNLINKED|sr13b-unlinked-challenge"
+        ]
+      }
+    },
+    "SR-13b/sr13b-historical-control": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-14/sr14-v2-package-assessment": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": [
+          "UNRESOLVED_PREDECESSOR_CHALLENGE|sr14-v1-challenge"
+        ]
+      }
+    },
+    "SR-14/sr14-disposed-control": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-14b/sr14b-v3-package-assessment": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": [
+          "UNRESOLVED_EARLIER_VERSION_CHALLENGE|sr14b-v2-challenge"
+        ]
+      }
+    },
+    "SR-16/sr16-prior-package-assessment": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    },
+    "SR-16/sr16-unresolved": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": [
+          "UNRESOLVED_PRIOR_REVIEW_CHALLENGE|sr16-prior-review-challenge"
+        ]
+      }
+    },
+    "SR-16/sr16-omission-sr16-prior-request": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "PASS",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "FAIL",
+          "presentedRecordsIntegrity": "PASS",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "presentedDisclosure|PRESENTED_DISCLOSURE_INCOMPLETE|requiredRecords||sr16-prior-request"
+        ],
+        "advisories": [
+          "UNRESOLVED_PRIOR_REVIEW_CHALLENGE|sr16-prior-review-challenge"
+        ]
+      }
+    },
+    "SR-16/sr16-omission-sr16-prior-observation": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "PASS",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "FAIL",
+          "presentedRecordsIntegrity": "PASS",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "presentedDisclosure|PRESENTED_DISCLOSURE_INCOMPLETE|requiredRecords||sr16-prior-observation"
+        ],
+        "advisories": [
+          "UNRESOLVED_PRIOR_REVIEW_CHALLENGE|sr16-prior-review-challenge"
+        ]
+      }
+    },
+    "SR-16/sr16-omission-sr16-prior-review-challenge": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "PASS",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "FAIL",
+          "presentedRecordsIntegrity": "PASS",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [
+          "presentedDisclosure|PRESENTED_DISCLOSURE_INCOMPLETE|requiredRecords||sr16-prior-review-challenge"
+        ],
+        "advisories": [
+          "UNRESOLVED_PRIOR_REVIEW_CHALLENGE|sr16-prior-review-challenge"
+        ]
+      }
+    },
+    "SR-16/sr16-disposed-control": {
+      "T0": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T1": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "HB": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "NOT_EVALUATED",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_ASSESSED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T2": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "NOT_EVALUATED",
+          "disclosureCoverage": "NOT_EVALUATED",
+          "presentedDisclosure": "NOT_EVALUATED",
+          "presentedRecordsIntegrity": "NOT_EVALUATED",
+          "authority": "NOT_EVALUATED",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      },
+      "T3": {
+        "execution": "COMPLETED",
+        "dimensions": {
+          "binding": "PASS",
+          "basisContext": "PASS",
+          "materialIntegrity": "PASS",
+          "toolIntegrity": "NOT_REPORTED",
+          "creatorIdentity": "PASS",
+          "disclosureCoverage": "PASS",
+          "presentedDisclosure": "NOT_PRESENTED",
+          "presentedRecordsIntegrity": "NOT_PRESENTED",
+          "authority": "PASS",
+          "procedure": "NOT_RUN"
+        },
+        "hardFindings": [],
+        "advisories": []
+      }
+    }
+  }
+}

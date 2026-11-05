@@ -1,0 +1,67 @@
+{
+  "format": "LWFA_PROFILES_2",
+  "status": "LOCKED_AFTER_REVIEW",
+  "note": "Independent verification profiles. The main comparison uses HB, T2, and T3; T0 and T1 are additional ablations. No profile is designated a superset of another. The OR combination is recorded only as cumulative_union for diagnostics, not as an executed profile.",
+  "profiles": [
+    {
+      "id": "T0",
+      "role": "ABLATION",
+      "name": "Hash-only custody",
+      "entrypoint": {
+        "root": "HARNESS",
+        "file": "scripts/lib/profiles.js",
+        "function": "t0"
+      },
+      "scope": "Manifest yang dikirim harus sama dengan manifestHash di package record; setiap file bahan dan tool harus cocok dengan hash yang tercatat di ledger. Tanpa request, versi, checkpoint, scope, konteks, riwayat, identitas."
+    },
+    {
+      "id": "T1",
+      "role": "ABLATION",
+      "name": "REF-LIFECYCLE (kit v0.8.1)",
+      "entrypoint": {
+        "root": "KIT",
+        "file": "adapter/reference/verifier.js",
+        "function": "assessPackage"
+      },
+      "scope": "Binding paket terarah-manifest dan hash/ukuran file bahan. context NOT_EVALUATED. Tool: hash salah = penolakan input; tool hilang tidak dilaporkan (NOT_REPORTED)."
+    },
+    {
+      "id": "HB",
+      "role": "MAIN",
+      "name": "HASH_COC_REFERENCE_1 (baseline peneliti, HashCoC v010)",
+      "entrypoint": {
+        "root": "HASHCOC",
+        "file": "lib/baseline.js",
+        "function": "assessHashCoC"
+      },
+      "scope": "Binding paket ke request/versi/manifest, kronologi dan checkpoint basis, komitmen record yang dipasok dan disajikan, identitas pembuat SELURUH record kasus di snapshot, jejak registrasi, hash/ukuran file bahan dan tool (toolResults). Tidak menilai kelengkapan konteks, riwayat, otoritas, atau protokol serah-terima."
+    },
+    {
+      "id": "T2",
+      "role": "MAIN",
+      "name": "PCC core assessPackage (vendor lwfa-v0.5.1 dalam kit v0.8.1)",
+      "entrypoint": {
+        "root": "KIT",
+        "file": "adapter/vendor/lwfa-v0.5.1/client/package.js",
+        "function": "assessPackage"
+      },
+      "scope": "Binding paket, kelengkapan konteks basis yang diturunkan dari ledger, hash/ukuran blob wajib. Tool: hash salah = penolakan input; tool hilang tidak dilaporkan (NOT_REPORTED, FIX-08A)."
+    },
+    {
+      "id": "T3",
+      "role": "MAIN",
+      "name": "PCC penuh assessResearchPackage (kit v0.8.1)",
+      "entrypoint": {
+        "root": "KIT",
+        "file": "disclosure/lib/assurance.js",
+        "function": "assessResearchPackage"
+      },
+      "scope": "T2 ditambah disclosure eksternal v2 (record wajib sampai kappa), identitas pembuat record yang DIWAJIBKAN disclosure (bukan seluruh record kasus), replay otoritas berscope, pemeriksaan disclosure yang disajikan, flag advisory riwayat. procedure NOT_RUN. Tool: sama dengan T2 (NOT_REPORTED)."
+    }
+  ],
+  "fix08a": {
+    "toolReporting": "PCC v0.8.1 (T1, T2, T3) tidak mengeluarkan hasil ketersediaan per tool. File tool yang hilang (ENOENT) ditelan di client/package.js verifyPackage dan di adapter/reference/verifier.js; field tool juga tidak ada di whitelist packageAssessment pada disclosure/lib/assurance.js. Normalisasi memakai NOT_REPORTED dan tidak pernah mengarang PASS dari flags kosong atau procedure NOT_RUN.",
+    "materialVsTool": "SR-10/missing-bytes menguji hilangnya bytes bahan (material), bukan file tool. Klaim 'file tidak tersedia terdeteksi' dibatasi pada bytes bahan. Tabel memisahkan materialIntegrity dan toolIntegrity.",
+    "witness": "diagnostics/missing-tool (D02) menyimpan input, hash, dan output mentah HB serta T3 untuk paket SR-00 yang tool pertamanya dihapus pada salinan."
+  }
+}

@@ -1,0 +1,767 @@
+{
+ "format": "LWFA_AUTHOR_REQUIREMENTS_1",
+ "status": "TRANSCRIBED_FROM_KIT_V081_SUITE",
+ "source": "Asersi penulis yang dibekukan pada rilis kit v0.8.1 (expectations.json bf50c919..., executableAssertions suite/core-cases.js dan suite/extensions.js). Ditranskripsi apa adanya; nomor baris adalah penunjuk, bukan kontrak.",
+ "oracleStatus": "AUTHOR_EXPECTATIONS_NOT_INDEPENDENTLY_APPROVED (sama dengan status di kit). Ini bukan oracle independen.",
+ "target": "Asersi dievaluasi pada output mentah T3 (assessResearchPackage). Asersi pada packageAssessment juga mengikat T2 karena T3 menyalin field T2 melalui whitelist.",
+ "macros": {
+  "COMPLETE_CORE": [
+   [
+    "packageAssessment.binding",
+    "eq",
+    "MATCH"
+   ],
+   [
+    "packageAssessment.context",
+    "eq",
+    "SATISFIED"
+   ],
+   [
+    "disclosure.coverage.status",
+    "eq",
+    "SATISFIED"
+   ],
+   [
+    "disclosure.creatorBinding.status",
+    "eq",
+    "BOUND"
+   ],
+   [
+    "disclosure.authority.status",
+    "eq",
+    "CONSISTENT"
+   ]
+  ],
+  "COMPLETE_EXT": [
+   [
+    "format",
+    "eq",
+    "LWFA_RESEARCH_ASSESSMENT_070"
+   ],
+   [
+    "packageAssessment.binding",
+    "eq",
+    "MATCH"
+   ],
+   [
+    "packageAssessment.context",
+    "eq",
+    "SATISFIED"
+   ],
+   [
+    "disclosure.coverage.status",
+    "eq",
+    "SATISFIED"
+   ],
+   [
+    "disclosure.creatorBinding.status",
+    "eq",
+    "BOUND"
+   ],
+   [
+    "disclosure.authority.status",
+    "eq",
+    "CONSISTENT"
+   ],
+   [
+    "packageAssessment.materialResults",
+    "lengthGt",
+    0
+   ],
+   [
+    "packageAssessment.materialResults[*].status",
+    "allEq",
+    "HASH_MATCH"
+   ]
+  ]
+ },
+ "requirements": [
+  {
+   "rowID": "SR-00/normal",
+   "checker": "T3",
+   "source": "suite/core-cases.js:69-70,107-118",
+   "macro": "COMPLETE_CORE",
+   "checks": [
+    [
+     "packageAssessment.materialResults",
+     "lengthEq",
+     7
+    ],
+    [
+     "packageAssessment.materialResults[*].status",
+     "allEq",
+     "HASH_MATCH"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "challenge-runtime"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "response-runtime"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "review-observation"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-01/positive-control",
+   "checker": "T3",
+   "source": "suite/core-cases.js:69-70,124",
+   "macro": "COMPLETE_CORE",
+   "checks": []
+  },
+  {
+   "rowID": "SR-01/substituted-byte",
+   "checker": "T3",
+   "source": "suite/core-cases.js:130-135",
+   "macro": "COMPLETE_CORE",
+   "checks": [
+    [
+     "packageAssessment.materialResults[blobRef.ownerVersionRef.objectID=artifact-cron].status",
+     "eq",
+     "HASH_MISMATCH"
+    ],
+    [
+     "procedure.status",
+     "eq",
+     "NOT_RUN"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-02/revised-basis-control",
+   "checker": "T3",
+   "source": "suite/core-cases.js:165-169",
+   "macro": "COMPLETE_CORE",
+   "checks": [
+    [
+     "packageAssessment.materialResults[*].status",
+     "allEq",
+     "HASH_MATCH"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-03/wrong-version",
+   "checker": "T3",
+   "source": "suite/core-cases.js:181-184",
+   "checks": [
+    [
+     "packageAssessment.binding",
+     "eq",
+     "MISMATCH"
+    ],
+    [
+     "packageAssessment.context",
+     "eq",
+     "NOT_ASSESSABLE"
+    ],
+    [
+     "packageAssessment.reason",
+     "eq",
+     "PACKAGE_REQUEST_MISMATCH"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-03/correct-version",
+   "checker": "T3",
+   "source": "suite/core-cases.js:185-186",
+   "macro": "COMPLETE_CORE",
+   "checks": []
+  },
+  {
+   "rowID": "SR-04/omitted-limitation",
+   "checker": "T3",
+   "source": "suite/core-cases.js:197-200",
+   "checks": [
+    [
+     "packageAssessment.binding",
+     "eq",
+     "MATCH"
+    ],
+    [
+     "packageAssessment.context",
+     "eq",
+     "UNSATISFIED"
+    ],
+    [
+     "packageAssessment.contextFailure.missing",
+     "includes",
+     "limit-acquisition"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-04/limitation-control",
+   "checker": "T3",
+   "source": "suite/core-cases.js:201",
+   "macro": "COMPLETE_CORE",
+   "checks": []
+  },
+  {
+   "rowID": "SR-05/omitted-challenge",
+   "checker": "T3",
+   "source": "suite/core-cases.js:212-215",
+   "checks": [
+    [
+     "packageAssessment.binding",
+     "eq",
+     "MATCH"
+    ],
+    [
+     "packageAssessment.context",
+     "eq",
+     "UNSATISFIED"
+    ],
+    [
+     "packageAssessment.contextFailure.missing",
+     "includes",
+     "challenge-runtime"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-05/history-control",
+   "checker": "T3",
+   "source": "suite/core-cases.js:216-218",
+   "macro": "COMPLETE_CORE",
+   "checks": [
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "review-observation"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-05/omitted-observation",
+   "checker": "T3",
+   "source": "suite/core-cases.js:221-225",
+   "checks": [
+    [
+     "presentedDisclosureCheck.coverageStatus",
+     "eq",
+     "UNSATISFIED"
+    ],
+    [
+     "presentedDisclosureCheck.missingRecordIDs",
+     "includes",
+     "review-observation"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-06/shared-source",
+   "checker": "T3",
+   "source": "suite/core-cases.js:238,243-247",
+   "macro": "COMPLETE_CORE",
+   "checks": [
+    [
+     "disclosure.predecessorIssues[issueRef.recordID=challenge-runtime].inCurrentBasis",
+     "eq",
+     false
+    ],
+    [
+     "disclosure.predecessorIssues[issueRef.recordID=challenge-runtime].unresolvedChallenge",
+     "eq",
+     true
+    ],
+    [
+     "disclosure.flags",
+     "includes",
+     "UNRESOLVED_PREDECESSOR_CHALLENGE"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-07/response-history",
+   "checker": "T3",
+   "source": "suite/core-cases.js:255-263",
+   "macro": "COMPLETE_CORE",
+   "checks": [
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "second-response"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-08/disposition-history",
+   "checker": "T3",
+   "source": "suite/core-cases.js:273-279",
+   "macro": "COMPLETE_CORE",
+   "checks": [
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "challenge-runtime"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "authorized-disposition"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-09/stale-checkpoint",
+   "checker": "T3",
+   "source": "suite/core-cases.js:295-297",
+   "checks": [
+    [
+     "packageAssessment.binding",
+     "eq",
+     "MISMATCH"
+    ],
+    [
+     "packageAssessment.reason",
+     "eq",
+     "MANIFEST_checkpointBasis_MISMATCH"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-09/current-checkpoint",
+   "checker": "T3",
+   "source": "suite/core-cases.js:298-299",
+   "macro": "COMPLETE_CORE",
+   "checks": [
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "new-basis-challenge"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-09/historical-replay",
+   "checker": "T3",
+   "source": "suite/core-cases.js:300-301",
+   "macro": "COMPLETE_CORE",
+   "checks": [
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "excludes",
+     "new-basis-challenge"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-09/historical-control",
+   "checker": "T3",
+   "source": "suite/core-cases.js:285-294 (verifyNormal)",
+   "macro": "COMPLETE_CORE",
+   "checks": []
+  },
+  {
+   "rowID": "SR-10/availability-control",
+   "checker": "T3",
+   "source": "suite/core-cases.js:307 (verifyNormal)",
+   "macro": "COMPLETE_CORE",
+   "checks": []
+  },
+  {
+   "rowID": "SR-10/missing-bytes",
+   "checker": "T3",
+   "source": "suite/core-cases.js:310-314",
+   "macro": "COMPLETE_CORE",
+   "checks": [
+    [
+     "packageAssessment.materialResults[blobRef.ownerVersionRef.objectID=artifact-bashrc].status",
+     "eq",
+     "NOT_OBTAINED"
+    ],
+    [
+     "packageAssessment.materialResults[*].status",
+     "excludes",
+     "HASH_MISMATCH"
+    ],
+    [
+     "procedure.status",
+     "eq",
+     "NOT_RUN"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-11/unrelated-branch",
+   "checker": "T3",
+   "source": "suite/core-cases.js:332-337",
+   "macro": "COMPLETE_CORE",
+   "checks": [
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "excludes",
+     "unrelated-branch"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "excludes",
+     "unrelated-branch-challenge"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "limit-acquisition"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-12/determinism-first",
+   "checker": "T3",
+   "source": "suite/core-cases.js:343-346",
+   "macro": "COMPLETE_CORE",
+   "checks": []
+  },
+  {
+   "rowID": "SR-12/determinism-second",
+   "checker": "T3",
+   "source": "suite/core-cases.js:343-346",
+   "macro": "COMPLETE_CORE",
+   "checks": [
+    [
+     "$canonical",
+     "sameAsRow",
+     "SR-12/determinism-first"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-13/sr13-stale-package-assessment",
+   "checker": "T3",
+   "source": "suite/extensions.js:51-60",
+   "macro": "COMPLETE_EXT",
+   "checks": [
+    [
+     "disclosure.flags",
+     "includes",
+     "POST_BASIS_ISSUE_BEFORE_REQUEST"
+    ],
+    [
+     "disclosure.flags",
+     "includes",
+     "UNRESOLVED_CHALLENGE_EXCLUDED_BY_CHI"
+    ],
+    [
+     "disclosure.postBasisIssues[issueRef.recordID=sr13-late-challenge].timing",
+     "eq",
+     "AFTER_CHI_BEFORE_REQUEST"
+    ],
+    [
+     "disclosure.postBasisIssues[issueRef.recordID=sr13-late-challenge].statusAtKappa",
+     "eq",
+     "OPEN"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "sr13-late-challenge"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-13/sr13-fresh-package-assessment",
+   "checker": "T3",
+   "source": "suite/extensions.js:65-67",
+   "macro": "COMPLETE_EXT",
+   "checks": [
+    [
+     "disclosure.flags",
+     "excludes",
+     "POST_BASIS_ISSUE_BEFORE_REQUEST"
+    ],
+    [
+     "disclosure.flags",
+     "excludes",
+     "UNRESOLVED_CHALLENGE_EXCLUDED_BY_CHI"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-14/sr14-v2-package-assessment",
+   "checker": "T3",
+   "source": "suite/extensions.js:84-90",
+   "macro": "COMPLETE_EXT",
+   "checks": [
+    [
+     "disclosure.flags",
+     "includes",
+     "UNRESOLVED_PREDECESSOR_CHALLENGE"
+    ],
+    [
+     "disclosure.predecessorIssues[issueRef.recordID=sr14-v1-challenge].statusAtKappa",
+     "eq",
+     "OPEN"
+    ],
+    [
+     "disclosure.predecessorIssues[issueRef.recordID=sr14-v1-challenge].inCurrentBasis",
+     "eq",
+     false
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "sr14-v1-challenge"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-14/sr14-disposed-control",
+   "checker": "T3",
+   "source": "suite/extensions.js:96-102",
+   "macro": "COMPLETE_EXT",
+   "checks": [
+    [
+     "disclosure.flags",
+     "excludes",
+     "UNRESOLVED_PREDECESSOR_CHALLENGE"
+    ],
+    [
+     "disclosure.predecessorIssues[issueRef.recordID=sr14-v1-challenge].statusAtKappa",
+     "eq",
+     "ADDRESSED"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "sr14-v1-challenge"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "sr14-authorized-disposition"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-13b/sr13b-current",
+   "checker": "T3",
+   "source": "suite/extensions.js:116-122",
+   "macro": "COMPLETE_EXT",
+   "checks": [
+    [
+     "disclosure.flags",
+     "includes",
+     "POST_REQUEST_BASIS_ISSUE_UNLINKED"
+    ],
+    [
+     "disclosure.postBasisIssues[issueRef.recordID=sr13b-unlinked-challenge].timing",
+     "eq",
+     "AFTER_REQUEST_THROUGH_KAPPA"
+    ],
+    [
+     "disclosure.postBasisIssues[issueRef.recordID=sr13b-unlinked-challenge].linkedToRequest",
+     "eq",
+     false
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "sr13b-unlinked-challenge"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-13b/sr13b-omission",
+   "checker": "T3",
+   "source": "suite/extensions.js:129-131",
+   "macro": "COMPLETE_EXT",
+   "checks": [
+    [
+     "presentedDisclosureCheck.coverageStatus",
+     "eq",
+     "UNSATISFIED"
+    ],
+    [
+     "presentedDisclosureCheck.missingRecordIDs",
+     "deepEqual",
+     [
+      "sr13b-unlinked-challenge"
+     ]
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-13b/sr13b-historical-control",
+   "checker": "T3",
+   "source": "suite/extensions.js:134-137",
+   "macro": "COMPLETE_EXT",
+   "checks": [
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "excludes",
+     "sr13b-unlinked-challenge"
+    ],
+    [
+     "disclosure.flags",
+     "excludes",
+     "POST_REQUEST_BASIS_ISSUE_UNLINKED"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-14b/sr14b-v3-package-assessment",
+   "checker": "T3",
+   "source": "suite/extensions.js:164-173",
+   "macro": "COMPLETE_EXT",
+   "checks": [
+    [
+     "disclosure.flags",
+     "includes",
+     "UNRESOLVED_EARLIER_VERSION_CHALLENGE"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "sr14b-finding-v2"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "sr14b-v2-challenge"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "excludes",
+     "sr14b-unrelated-challenge"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-16/sr16-prior-package-assessment",
+   "checker": "T3",
+   "source": "suite/extensions.js:184",
+   "macro": "COMPLETE_EXT",
+   "checks": []
+  },
+  {
+   "rowID": "SR-16/sr16-unresolved",
+   "checker": "T3",
+   "source": "suite/extensions.js:197-209",
+   "macro": "COMPLETE_EXT",
+   "checks": [
+    [
+     "disclosure.flags",
+     "includes",
+     "UNRESOLVED_PRIOR_REVIEW_CHALLENGE"
+    ],
+    [
+     "disclosure.priorReviews[requestRef.recordID=sr16-prior-request].historyInterpretation",
+     "eq",
+     "NOT_REEVALUATED_HISTORY"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "sr16-prior-request"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "sr16-prior-package"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "sr16-prior-observation"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "sr16-prior-review-challenge"
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-16/sr16-omission-sr16-prior-request",
+   "checker": "T3",
+   "source": "suite/extensions.js:215-219",
+   "macro": "COMPLETE_EXT",
+   "checks": [
+    [
+     "presentedDisclosureCheck.coverageStatus",
+     "eq",
+     "UNSATISFIED"
+    ],
+    [
+     "presentedDisclosureCheck.missingRecordIDs",
+     "deepEqual",
+     [
+      "sr16-prior-request"
+     ]
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-16/sr16-omission-sr16-prior-observation",
+   "checker": "T3",
+   "source": "suite/extensions.js:215-219",
+   "macro": "COMPLETE_EXT",
+   "checks": [
+    [
+     "presentedDisclosureCheck.coverageStatus",
+     "eq",
+     "UNSATISFIED"
+    ],
+    [
+     "presentedDisclosureCheck.missingRecordIDs",
+     "deepEqual",
+     [
+      "sr16-prior-observation"
+     ]
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-16/sr16-omission-sr16-prior-review-challenge",
+   "checker": "T3",
+   "source": "suite/extensions.js:215-219",
+   "macro": "COMPLETE_EXT",
+   "checks": [
+    [
+     "presentedDisclosureCheck.coverageStatus",
+     "eq",
+     "UNSATISFIED"
+    ],
+    [
+     "presentedDisclosureCheck.missingRecordIDs",
+     "deepEqual",
+     [
+      "sr16-prior-review-challenge"
+     ]
+    ]
+   ]
+  },
+  {
+   "rowID": "SR-16/sr16-disposed-control",
+   "checker": "T3",
+   "source": "suite/extensions.js:225-230",
+   "macro": "COMPLETE_EXT",
+   "checks": [
+    [
+     "disclosure.flags",
+     "excludes",
+     "UNRESOLVED_PRIOR_REVIEW_CHALLENGE"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "sr16-authorized-disposition"
+    ],
+    [
+     "disclosure.requiredRecords[*].record.recordID",
+     "includes",
+     "sr16-prior-review-challenge"
+    ]
+   ]
+  }
+ ]
+}
