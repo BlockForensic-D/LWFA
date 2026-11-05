@@ -1,0 +1,16 @@
+{
+  "name": "lwfa-disclosure",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Version-bound external LWFA assurance protocol with mandatory checkpoint, contextual disclosure and scoped authority replay; chaincode v0.5.1 retained.",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "test": "node --require ./tests/isolation.cjs --test tests/*.test.js"
+  },
+  "dependencies": {
+    "fabric-shim": "2.5.8"
+  }
+}

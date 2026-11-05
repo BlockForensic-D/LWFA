@@ -1,0 +1,156 @@
+{
+  "format": "LWFA_PCC_EXPECTATION_PLAN_2",
+  "extends": "LWFA_SecRespond_Reference_v010/pcc-cases.json (SR-00..SR-12); frozen oracle 6ee671eefc3b05fdc16e96df82ab9155a721af193103b2149d7cbde52744e86b is not modified",
+  "status": "AUTHOR_EXPECTATIONS_LOCAL_REGRESSIONS_ONLY_LIVE_NOT_RUN_INDEPENDENT_REVIEW_PENDING",
+  "oracleApproved": false,
+  "reviewedBy": null,
+  "authoringBasis": "Requirements and adversarial examples derived from the declared threat model and reviewed code. These expectations are author-authored, not an independently approved oracle.",
+  "separationRule": "Legacy nu0-m2 v5 results retain their original meaning. External protocol v2 requires disclosure coverage and separately reports creator binding, authority replay and concerns. Complete disclosure may contain unresolved challenges; no blanket VERIFIED output.",
+  "cases": [
+    {
+      "id": "SR-13",
+      "name": "Basis lag chosen by the request opener",
+      "intervention": "After INC-01..REP-01 exist, record a CHALLENGE on an in-scope PROCESS. The AssuranceReviewer then opens a review whose chi is a block before that challenge. Build and register the package from the ledger at chi.",
+      "coreV051Expected": {
+        "binding": "MATCH",
+        "context": "SATISFIED",
+        "challengeInPackage": false,
+        "challengeInHistorySummary": false
+      },
+      "disclosureExpected": {
+        "flags": [
+          "POST_BASIS_ISSUE_BEFORE_REQUEST",
+          "UNRESOLVED_CHALLENGE_EXCLUDED_BY_CHI"
+        ],
+        "postBasisIssues.timing": "AFTER_CHI_BEFORE_REQUEST"
+      },
+      "control": "Same steps with chi taken after the challenge: challenge is a package obligation; no post-basis flag.",
+      "dimension": "C/Ct",
+      "localEvidence": "lwfa-disclosure-v0.1.0/tests/disclosure.test.js: 'SR-13 basis lag', 'control: fresh chi'; tests/cli.test.js",
+      "actualOutcome": "NOT_RUN",
+      "experimentGroup": "HONEST_CONTRACT_FUNCTIONAL_LIVE_PLANNED"
+    },
+    {
+      "id": "SR-14",
+      "name": "Challenge escaped through an unchanged revision",
+      "intervention": "Record a CHALLENGE on F-01 v1. Register F-01 v2 with identical data and predecessorRef=v1. Open and package a review of F-01 v2.",
+      "coreV051Expected": {
+        "binding": "MATCH",
+        "context": "SATISFIED",
+        "challengeOnV1InPackage": false,
+        "challengeOnV1InHistorySummary": false
+      },
+      "disclosureExpected": {
+        "flags": [
+          "UNRESOLVED_PREDECESSOR_CHALLENGE"
+        ],
+        "predecessorIssues.statusAtKappa": "OPEN"
+      },
+      "control": "Same steps after an authorized reviewer disposes the v1 challenge (ADDRESSED): item listed, no flag.",
+      "dimension": "C/Ct",
+      "localEvidence": "tests/disclosure.test.js: 'SR-14 revision laundering', 'SR-14 control'",
+      "actualOutcome": "NOT_RUN",
+      "experimentGroup": "HONEST_CONTRACT_FUNCTIONAL_LIVE_PLANNED"
+    },
+    {
+      "id": "SR-15a",
+      "name": "Record attributed to the reviewer but submitted by another identity",
+      "intervention": "Requires modified chaincode on two endorsing organizations (outside the honest deployment). Commit an ISSUE_DISPOSITION whose envelope actor is the designated IndependentReviewer while the transaction creator is an Org1 investigator.",
+      "coreV051Expected": {
+        "historySummaryIssueStatus": "ADDRESSED",
+        "detected": false
+      },
+      "disclosureExpected": {
+        "flags": [
+          "ACTOR_CREATOR_MISMATCH",
+          "AUTHORITY_VIOLATION"
+        ]
+      },
+      "dimension": "P/Ct",
+      "liveExecutionNote": "Live execution needs a separately packaged adversarial chaincode and a dedicated channel; do not deploy it on the measurement channel. The local test simulates the committed state directly.",
+      "localEvidence": "tests/disclosure.test.js: 'SR-15a'; tests/creators.test.js (real certificates, Fabric-shaped blocks)",
+      "actualOutcome": "NOT_RUN",
+      "experimentGroup": "LOCAL_ADVERSARIAL_STATE_STRESS_ONLY"
+    },
+    {
+      "id": "SR-15b",
+      "name": "Self-disposition committed without the contract checks",
+      "intervention": "As SR-15a, but the actor honestly names the Org1 investigator who authored the challenged process.",
+      "coreV051Expected": {
+        "historySummaryIssueStatus": "ADDRESSED",
+        "detected": false
+      },
+      "disclosureExpected": {
+        "creatorBinding": "BOUND",
+        "flags": [
+          "AUTHORITY_VIOLATION"
+        ],
+        "rules": [
+          "DISPOSITION_REQUIRES_ASSIGNED_INDEPENDENT_REVIEWER",
+          "SELF_REVIEW_TARGET_AUTHOR",
+          "SELF_REVIEW_TARGET_OWNER"
+        ]
+      },
+      "dimension": "Ct",
+      "localEvidence": "tests/disclosure.test.js: 'SR-15b'",
+      "actualOutcome": "NOT_RUN",
+      "experimentGroup": "LOCAL_ADVERSARIAL_STATE_STRESS_ONLY"
+    },
+    {
+      "id": "SR-13b",
+      "name": "Post-request unlinked issue on exact basis",
+      "intervention": "Open review, then record an unlinked challenge against an exact basis material before pinned kappa.",
+      "disclosureExpected": {
+        "flagsContain": [
+          "POST_REQUEST_BASIS_ISSUE_UNLINKED"
+        ],
+        "coverage": "SATISFIED_WHEN_COMPLETE"
+      },
+      "omissionControl": "Remove the issue from the presented disclosure while preserving a valid legacy package; expected coverage UNSATISFIED.",
+      "temporalControl": "Issue after a separately pinned historical endpoint is outside that historical snapshot.",
+      "actualOutcome": "NOT_RUN",
+      "experimentGroup": "HONEST_CONTRACT_FUNCTIONAL_LIVE_PLANNED"
+    },
+    {
+      "id": "SR-14b",
+      "name": "Earlier sibling revision skipped by predecessor",
+      "intervention": "Create v2 from v1 and challenge v2. Create v3 from v1, then review v3.",
+      "disclosureExpected": {
+        "flagsContain": [
+          "UNRESOLVED_EARLIER_VERSION_CHALLENGE"
+        ],
+        "requiredHistory": "v2 and its issue/events"
+      },
+      "control": "Unrelated object history is excluded; issue on an exact current basis version retains its current-basis obligation.",
+      "actualOutcome": "NOT_RUN",
+      "experimentGroup": "HONEST_CONTRACT_FUNCTIONAL_LIVE_PLANNED"
+    },
+    {
+      "id": "SR-16",
+      "name": "Previous review omitted by opening an unlinked new request",
+      "intervention": "Complete a prior review of the same exact target version, record its challenge and observations, then open a new review with predecessorRequestRef=null.",
+      "disclosureExpected": {
+        "requiredHistory": "Prior review scope, chi, policy, checkPlan, package records, observations, associated issues and events",
+        "historyInterpretation": "NOT_REEVALUATED_HISTORY",
+        "flagsContain": [
+          "UNRESOLVED_PRIOR_REVIEW_CHALLENGE"
+        ]
+      },
+      "control": "After authorized disposition, the history remains present without the unresolved flag; different-target reviews remain outside scope.",
+      "omissionControl": "Removing a prior request, observation or linked issue from the presented disclosure yields UNSATISFIED.",
+      "actualOutcome": "NOT_RUN",
+      "experimentGroup": "HONEST_CONTRACT_FUNCTIONAL_LIVE_PLANNED"
+    }
+  ],
+  "limits": [
+    "Registered scoped history through reviewer-pinned kappa only; unrecorded facts and semantic equivalence across distinct objectIDs are outside scope.",
+    "All earlier versions of the same (caseID, objectID) must be disclosed; concerns on those versions are advisory unless the exact version is already in the current basis.",
+    "Prior reviews concern the exact current target/version and retain original scope, chi, policy and recorded outcomes; they are NOT_REEVALUATED_HISTORY.",
+    "Creator extraction relies on the trusted Org3 snapshot validation flags, not independent certificate/signature validation.",
+    "Missing identity evidence is NOT_EVALUATED or INCOMPLETE; absent role on a derived certificate is an authority violation.",
+    "Local fixtures and tests do not establish live SecRespond outcomes. Independent approval and fresh live campaign evidence remain pending."
+  ],
+  "protocol": "LWFA_EXTERNAL_DISCLOSURE/2.0; exact definition/hash provided by lib/policy.js",
+  "normalThreatModel": "Credentialed insiders; every endorsement-satisfying set includes honest validation. SR-13, SR-14, SR-14b and SR-16 do not require malicious chaincode.",
+  "stressThreatModel": "SR-15a/b are local adversarial-state simulations outside the normal honest-endorsement assumption, not evidence of full Byzantine-endorsing coalition tolerance."
+}
