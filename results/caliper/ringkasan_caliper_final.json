@@ -1,0 +1,389 @@
+{
+ "correlationsFig2": {
+  "afterBatchMeanMs": 0.9990181367641318,
+  "batchWaitMeanMs": 0.9621205917503926,
+  "commitIntervalMedianS": 0.8723299331268349,
+  "diskBusyMeanPct": 0.9714997748462472,
+  "diskCompletionMsMean": 0.9666476837724416,
+  "diskReadKBps": 0.09919441662809153,
+  "diskWriteKBps": 0.6453457809756536,
+  "hostCpuBusyPct": 0.7395620564223784,
+  "hostIowaitPct": 0.9431130838773656,
+  "ioPressureSomeAvg10Max": 0.8913934909580435,
+  "networkCores": 0.7681985341458792,
+  "networkCpuMsPerTx": 0.612181158833369,
+  "pgmajfaultPerS": 0.11267570588553742,
+  "pswpinPerS": 0.16390514373856482,
+  "pswpoutPerS": -0.004853186561908899,
+  "targetTPS": 0.4601695171279458
+ },
+ "figure1": {
+  "afterBatchMeanMs": {
+   "max": 640.3661784287616,
+   "median": 418.051930758988,
+   "min": 277.09454061251665
+  },
+  "batchWaitMeanMs": {
+   "max": 1048.699067909454,
+   "median": 1014.4993342210386,
+   "min": 980.2416777629827
+  },
+  "batchWaitSharePct": {
+   "max": 77.97489897568008,
+   "median": 70.79374742618816,
+   "min": 62.08754044184887
+  },
+  "chaincodeCpuMsPerTx": {
+   "max": 37.88033242343541,
+   "median": 19.52989274300932,
+   "min": 15.509721038615176
+  },
+  "commitIntervalMedianS": {
+   "max": 2.157,
+   "median": 2.12125,
+   "min": 2.0675
+  },
+  "latencyMeanMs": {
+   "max": 1688.4427430093208,
+   "median": 1430.8751664447404,
+   "min": 1257.5106524633823
+  },
+  "latencyP95Ms": {
+   "max": 2716.0,
+   "median": 2402.0,
+   "min": 2189.0
+  },
+  "networkCpuMsPerTx": {
+   "max": 76.99879094540611,
+   "median": 48.42258515312916,
+   "min": 40.27744354194407
+  },
+  "pass": 39,
+  "perProfileMeanOfMeans": {
+   "ISSUE-DISPOSE": 1385.4107856191745,
+   "ISSUE-RECORD": 1381.450510430537,
+   "ISSUE-RESPOND": 1517.4329782512204,
+   "OBSERVATION-APPEND": 1517.5348424323124,
+   "PACKAGE-REGISTER": 1499.9198845983135,
+   "REVIEW-OPEN": 1474.7392365734577,
+   "RM-ANALYSIS": 1436.5508211273857,
+   "RM-ARTIFACT": 1298.3863737239237,
+   "RM-EXAMINATION": 1490.0266311584553,
+   "RM-FINDING": 1309.2640923213494,
+   "RM-INCIDENT": 1379.7756324900133,
+   "RM-REPORT": 1489.7223701731025
+  },
+  "readLatencyMeanMs": [
+   8.369507323568575,
+   8.274966711051931,
+   8.324234354194408
+  ],
+  "readRuns": 3,
+  "txPerBlockInteriorMean": {
+   "max": 54.81481481481482,
+   "median": 53.111111111111114,
+   "min": 51.714285714285715
+  },
+  "validExactlyOnce": 54072,
+  "writeRuns": 36,
+  "writeTx": 54072
+ },
+ "figure2": {
+  "afterBatchMeanMs": {
+   "max": 941.5181347150259,
+   "median": 466.1663197335554,
+   "min": 285.027192008879
+  },
+  "at45": {
+   "ISSUE-DISPOSE": {
+    "throughputMax": 44.31396988880507,
+    "throughputMin": 43.04398387841906
+   },
+   "OBSERVATION-APPEND": {
+    "throughputMax": 44.051714299688605,
+    "throughputMin": 43.93210197710718
+   },
+   "RM-ANALYSIS": {
+    "throughputMax": 44.7536231884058,
+    "throughputMin": 43.67856969657781
+   },
+   "RM-INCIDENT": {
+    "throughputMax": 44.249381786024266,
+    "throughputMin": 43.541317519659664
+   }
+  },
+  "batchWaitMeanMs": {
+   "max": 1092.6132494448557,
+   "median": 1031.116985845129,
+   "min": 987.6853496115427
+  },
+  "batchWaitSharePct": {
+   "max": 77.6047471296243,
+   "median": 68.83847632134254,
+   "min": 53.713995956859826
+  },
+  "blocksAtMaxMessageCount": 68,
+  "blocksWithMeasuredTx": 1051,
+  "clientFailed": 0,
+  "cohortGrowthLastFirst": {
+   "max": 1.2381643859853062,
+   "median": 0.9681087358954998,
+   "min": 0.7135159447934813
+  },
+  "commitIntervalMedianS": {
+   "max": 2.195,
+   "median": 2.1317500000000003,
+   "min": 2.066
+  },
+  "configurationHashes": [
+   "32aee7912c0daf047973084a8a91e8e0866ac6cd20966e1d5b9a722644785c87"
+  ],
+  "diskBusyMaxPct": {
+   "max": 92.40255955089955,
+   "median": 80.27206016168896,
+   "min": 21.899224570357184
+  },
+  "diskBusyMeanPct": {
+   "max": 41.40108056522027,
+   "median": 18.758389233958763,
+   "min": 6.616883820013327
+  },
+  "drainS": {
+   "max": 2.771,
+   "median": 1.0875,
+   "min": 0.375
+  },
+  "hostCpuBusyPct": {
+   "max": 46.67347286030287,
+   "median": 29.922020205612583,
+   "min": 20.640057533261416
+  },
+  "hostIowaitPct": {
+   "max": 11.879209837889055,
+   "median": 4.595666684497429,
+   "min": 1.0488781382934356
+  },
+  "hostLoad1Max": {
+   "max": 8.0126953125,
+   "median": 3.88916015625,
+   "min": 1.53515625
+  },
+  "latencyMaxS": {
+   "max": 4.3,
+   "median": 2.87,
+   "min": 2.36
+  },
+  "latencyMeanMs": {
+   "max": 2033.3245743893413,
+   "median": 1497.6860949208992,
+   "min": 1272.0088790233074
+  },
+  "latencyP95Ms": {
+   "max": 3502.0,
+   "median": 2458.5,
+   "min": 2199.0
+  },
+  "ledgerInvalid": 0,
+  "ledgerUnconfirmed": 0,
+  "measuredTx": 82872,
+  "nonPass": [
+   [
+    "RM-ANALYSIS",
+    45,
+    "s03",
+    "pendingFractionBelow5Pct",
+    0.050333086602516654
+   ]
+  ],
+  "pass": 35,
+  "peerConvergedAll": true,
+  "pendingFraction": {
+   "max": 0.050333086602516654,
+   "median": 0.02664569557443803,
+   "min": 0.006661115736885929
+  },
+  "recheckGrowthAbsDiff": {
+   "max": 0.00028331725280916764,
+   "median": 8.644782481292967e-05,
+   "min": 1.3821425379090257e-05
+  },
+  "recheckMeanAbsDiffMs": {
+   "max": 0.0,
+   "median": 0.0,
+   "min": 0.0
+  },
+  "recheckP95AbsDiffMs": {
+   "max": 0.0,
+   "median": 0.0,
+   "min": 0.0
+  },
+  "runs": 36,
+  "throughputOverSendMin": 0.9558727478374459,
+  "throughputTPS": {
+   "max": 44.7536231884058,
+   "median": 39.154650382366555,
+   "min": 29.134061954342627
+  },
+  "txIDsWithCopies": 0,
+  "txPerBlockInteriorMean": {
+   "max": 98.37037037037037,
+   "median": 85.62962962962963,
+   "min": 62.07142857142857
+  },
+  "validExactlyOnce": 82872
+ },
+ "orderEffects": {
+  "ISSUE-DISPOSE": {
+   "firstRun": "2026-10-11T05:52:34.764Z",
+   "lastRun": "2026-10-11T15:17:45.020Z",
+   "spearmanSequenceVsMeanLatency": 0.33333333333333337
+  },
+  "OBSERVATION-APPEND": {
+   "firstRun": "2026-10-15T10:48:27.234Z",
+   "lastRun": "2026-10-15T21:35:22.126Z",
+   "spearmanSequenceVsMeanLatency": -0.1333333333333333
+  },
+  "RM-ANALYSIS": {
+   "firstRun": "2026-10-10T21:57:12.955Z",
+   "lastRun": "2026-10-11T03:13:02.731Z",
+   "spearmanSequenceVsMeanLatency": -0.2666666666666666
+  },
+  "RM-INCIDENT": {
+   "firstRun": "2026-10-13T18:33:35.316Z",
+   "lastRun": "2026-10-13T20:57:18.182Z",
+   "spearmanSequenceVsMeanLatency": -0.016666666666666607
+  }
+ },
+ "slopes": {
+  "ISSUE-DISPOSE": {
+   "afterBatch_30to45": {
+    "ci95High": 29.224008414601276,
+    "ci95Low": -2.8233082515972576,
+    "interceptMs": -22.053160678618724,
+    "n": 9,
+    "slopeMsPerTPS": 13.200350081502009
+   },
+   "batchWait_30to45": {
+    "ci95High": 5.407496591821879,
+    "ci95Low": -0.09703520850409753,
+    "interceptMs": 927.6437635132054,
+    "n": 9,
+    "slopeMsPerTPS": 2.6552306916588906
+   },
+   "meanLatency_25to45_withFig1": {
+    "ci95High": 23.30378065283682,
+    "ci95Low": 1.6761966863236264,
+    "interceptMs": 1043.7046032673916,
+    "n": 12,
+    "slopeMsPerTPS": 12.489988669580224
+   },
+   "meanLatency_30to45": {
+    "ci95High": 34.56468805277794,
+    "ci95Low": -2.8518042879541117,
+    "interceptMs": 904.8384082380843,
+    "n": 9,
+    "slopeMsPerTPS": 15.856441882411913
+   }
+  },
+  "OBSERVATION-APPEND": {
+   "afterBatch_30to45": {
+    "ci95High": 32.96491131184929,
+    "ci95Low": 11.575247324810537,
+    "interceptMs": -212.29100103819678,
+    "n": 9,
+    "slopeMsPerTPS": 22.270079318329913
+   },
+   "batchWait_30to45": {
+    "ci95High": 5.0035419223713,
+    "ci95Low": 2.829855098114864,
+    "interceptMs": 906.2240825096507,
+    "n": 9,
+    "slopeMsPerTPS": 3.916698510243082
+   },
+   "meanLatency_25to45_withFig1": {
+    "ci95High": 29.126441411843224,
+    "ci95Low": 9.668253464699262,
+    "interceptMs": 973.2559924228675,
+    "n": 12,
+    "slopeMsPerTPS": 19.397347438271243
+   },
+   "meanLatency_30to45": {
+    "ci95High": 37.70542071442307,
+    "ci95Low": 14.653883088442596,
+    "interceptMs": 693.4859333174518,
+    "n": 9,
+    "slopeMsPerTPS": 26.179651901432834
+   }
+  },
+  "RM-ANALYSIS": {
+   "afterBatch_30to45": {
+    "ci95High": 14.625548775981102,
+    "ci95Low": -9.958679038522156,
+    "interceptMs": 338.80945213632697,
+    "n": 9,
+    "slopeMsPerTPS": 2.3334348687294724
+   },
+   "batchWait_30to45": {
+    "ci95High": 3.3062354994664775,
+    "ci95Low": 0.08123395931422106,
+    "interceptMs": 962.1048067356057,
+    "n": 9,
+    "slopeMsPerTPS": 1.6937347293903493
+   },
+   "meanLatency_25to45_withFig1": {
+    "ci95High": 11.70032316350095,
+    "ci95Low": -6.501744555360837,
+    "interceptMs": 1359.0663817043942,
+    "n": 12,
+    "slopeMsPerTPS": 2.5992893040700573
+   },
+   "meanLatency_30to45": {
+    "ci95High": 17.83389357328618,
+    "ci95Low": -9.777667691719738,
+    "interceptMs": 1300.1274066899762,
+    "n": 9,
+    "slopeMsPerTPS": 4.028112940783221
+   }
+  },
+  "RM-INCIDENT": {
+   "afterBatch_30to45": {
+    "ci95High": 17.01939037342784,
+    "ci95Low": -7.923255480645881,
+    "interceptMs": 242.8043198366897,
+    "n": 9,
+    "slopeMsPerTPS": 4.54806744639098
+   },
+   "batchWait_30to45": {
+    "ci95High": 3.0738816789889363,
+    "ci95Low": -0.7846496512925301,
+    "interceptMs": 980.0434632527794,
+    "n": 9,
+    "slopeMsPerTPS": 1.144616013848203
+   },
+   "meanLatency_25to45_withFig1": {
+    "ci95High": 13.476718832465412,
+    "ci95Low": -3.3217396968252695,
+    "interceptMs": 1247.4647192909065,
+    "n": 12,
+    "slopeMsPerTPS": 5.077489567820071
+   },
+   "meanLatency_30to45": {
+    "ci95High": 20.028634941086455,
+    "ci95Low": -8.645387461765157,
+    "interceptMs": 1222.1316847024827,
+    "n": 9,
+    "slopeMsPerTPS": 5.691623739660648
+   }
+  }
+ },
+ "withinCellCorrelationWithLatency": {
+  "afterBatchMeanMs": 0.9988592378733635,
+  "diskBusyMeanPct": 0.9764817736528648,
+  "diskReadKBps": -0.03217362438774427,
+  "diskWriteKBps": -0.21167076781675714,
+  "hostCpuBusyPct": -0.04047047143138738,
+  "hostIowaitPct": 0.981255677544423,
+  "pgmajfaultPerS": 0.15931699398142174,
+  "pswpinPerS": -0.014381404272643
+ }
+}

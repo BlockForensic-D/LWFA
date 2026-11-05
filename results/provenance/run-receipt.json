@@ -1,0 +1,85 @@
+{
+ "format": "LWFA_RUN_RECEIPT_2",
+ "harnessVersion": "2.2",
+ "runID": "lwfa-v2.2-20261005T185348Z-840a665b",
+ "createdAt": "2026-10-05T18:53:48.061Z",
+ "updatedAt": "2026-10-05T18:59:53.030Z",
+ "runStatus": "COMPLETE",
+ "scientificMatch": "PASS",
+ "stage": "complete",
+ "completedStages": [
+  "capability",
+  "diagnostics",
+  "bench"
+ ],
+ "error": null,
+ "requestedStages": {
+  "preflight": true,
+  "capability": true,
+  "diagnostics": true,
+  "bench": true,
+  "cadence": false
+ },
+ "bench": {
+  "reps": 30,
+  "warmup": 3,
+  "seed": 20261005
+ },
+ "args": {
+  "kit": "/home/labnuc/2labforensic/LWFA_PCC_Evaluation_v081",
+  "hashcoc": "/home/labnuc/2labforensic/LWFA_HashCoC_Comparison_v010",
+  "campaign": "/home/labnuc/2labforensic/LWFA_PCC_Evaluation_v081/results/pcc-full-pc20261002T014736",
+  "out": "/home/labnuc/2labforensic/LWFA_PCC_Harness_v2_2_20261005/out/bench-nuc-20261005T185347Z-2340119",
+  "figure1": null,
+  "runBench": "1",
+  "node": "v20.19.3",
+  "python": "Python 3.10.12"
+ },
+ "meaning": "runStatus = operasional (RUNNING/COMPLETE/FAILED); scientificMatch = kecocokan dengan expected outcomes (PASS/FAIL). Keduanya terpisah.",
+ "gateExit": 0,
+ "rootFiles": [
+  {
+   "path": "source-lock.json",
+   "sha256": "1e96a3e0ad74d6c3095cd667f4600c0cd5178e4cfc7b1e47c15500bc5a2c3dc1"
+  },
+  {
+   "path": "input-lock-before.json",
+   "sha256": "16d0999a97f65d05943064c11ac7e90aa4153baa0ec5cf45a879d3a1867cb0dc"
+  },
+  {
+   "path": "registry-snapshot.json",
+   "sha256": "5283ab90449cc20d67ac0cca141f3712064e9c05775cd6822a5e6b5fa9f1a834"
+  },
+  {
+   "path": "input-lock-after.json",
+   "sha256": "07775d2641f6a987c81b3b2824049ad58bd0a40d3d3a388217f2c60d4c037e68"
+  },
+  {
+   "path": "source-lock-after.json",
+   "sha256": "2cbfa0176de029a990abdca5ae95150af713c61b67a753240593f3b6ae1e74e3"
+  },
+  {
+   "path": "validation.json",
+   "sha256": "4ea981f2c8cacfbde42faada8889e20fb3bb2c27106ec48c90a35b77e6e910d4"
+  }
+ ],
+ "stageManifests": [
+  {
+   "stage": "capability",
+   "sha256": "3287b5157dc1bcc4541083bfcdaaa576fa89fc82d2da62c75220aa446c916814"
+  },
+  {
+   "stage": "diagnostics",
+   "sha256": "d4d818d5a72f68dbf027c5f59b2bc17bb48f216bbb81d7fdd53fadc9439868bd"
+  },
+  {
+   "stage": "bench",
+   "sha256": "a186b5edea40938cd243cac73d1bdcfac6f023a81492163946614c4d246596f3"
+  }
+ ],
+ "finalVerify": {
+  "status": "PASS",
+  "exit": 0,
+  "at": "2026-10-05T18:59:53.030Z"
+ }
+}

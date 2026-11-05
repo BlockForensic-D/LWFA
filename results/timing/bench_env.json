@@ -1,0 +1,248 @@
+{
+ "format": "LWFA_BENCH_ENV_2",
+ "runID": "lwfa-v2.2-20261005T185348Z-840a665b",
+ "harnessVersion": "2.2",
+ "provider": {
+  "kind": "REAL",
+  "file": "scripts/lib/bench_provider_real.js",
+  "sha256": "3436e6e3213b7f1adacc4ec2c62117f0315f7c1e4a5801919f69bb1b910032e1",
+  "override": false
+ },
+ "node": "v20.19.3",
+ "v8": "11.3.244.8-node.29",
+ "python": "Python 3.10.12",
+ "platform": "linux",
+ "arch": "x64",
+ "osRelease": "6.8.0-60-generic",
+ "cpu": "Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz",
+ "cpus": 8,
+ "totalMemGiB": 31.21,
+ "start": {
+  "loadavg": [
+   0.64,
+   0.25,
+   0.14
+  ],
+  "freeMemGiB": 23.66,
+  "at": "2026-10-05T18:54:07.565Z"
+ },
+ "end": {
+  "loadavg": [
+   1.01,
+   0.82,
+   0.44
+  ],
+  "freeMemGiB": 23.81,
+  "at": "2026-10-05T18:59:44.928Z"
+ },
+ "process": {
+  "pid": 2340924,
+  "execPath": "/home/labnuc/.nvm/versions/node/v20.19.3/bin/node",
+  "execArgv": []
+ },
+ "reps": 30,
+ "warmup": 3,
+ "seed": 20261005,
+ "prng": "mulberry32(seed >>> 0); Fisher-Yates shuffle of the full call list once per repetition (warmup reps included, in order -WARMUP..REPS-1)",
+ "timer": "process.hrtime.bigint() around one call; elapsedNs integer; elapsedMs = elapsedNs/1e6 written exactly with 6 decimals",
+ "timedRegion": "Verifier: one call of the profile entrypoint on preloaded snapshot/identities (includes the checker's own package file reads). Replay: Hist.replay + Creators.identities over block buffers already in memory (\"replay-plus-identity\"; excludes reading blocks from disk; not total blockchain retrieval cost).",
+ "excluded": "source lock, input lock, file I/O of results, normalisation, projection and signature comparison (all outside the timer)",
+ "units": {
+  "rows": [
+   {
+    "rowID": "SR-00/normal",
+    "snapshotKey": "SR-00/normal-history"
+   },
+   {
+    "rowID": "SR-01/positive-control",
+    "snapshotKey": "SR-01/positive-control-history"
+   },
+   {
+    "rowID": "SR-01/substituted-byte",
+    "snapshotKey": "SR-01/positive-control-history"
+   },
+   {
+    "rowID": "SR-02/revised-basis-control",
+    "snapshotKey": "SR-02/revised-basis-control"
+   },
+   {
+    "rowID": "SR-03/wrong-version",
+    "snapshotKey": "SR-03/version-binding-history"
+   },
+   {
+    "rowID": "SR-03/correct-version",
+    "snapshotKey": "SR-03/version-binding-history"
+   },
+   {
+    "rowID": "SR-04/omitted-limitation",
+    "snapshotKey": "SR-04/omitted-limitation-history"
+   },
+   {
+    "rowID": "SR-04/limitation-control",
+    "snapshotKey": "SR-04/omitted-limitation-history"
+   },
+   {
+    "rowID": "SR-05/omitted-challenge",
+    "snapshotKey": "SR-05/challenge-history"
+   },
+   {
+    "rowID": "SR-05/history-control",
+    "snapshotKey": "SR-05/challenge-history"
+   },
+   {
+    "rowID": "SR-05/omitted-observation",
+    "snapshotKey": "SR-05/challenge-history"
+   },
+   {
+    "rowID": "SR-06/shared-source",
+    "snapshotKey": "SR-06/shared-source"
+   },
+   {
+    "rowID": "SR-07/response-history",
+    "snapshotKey": "SR-07/response-history-history"
+   },
+   {
+    "rowID": "SR-08/disposition-history",
+    "snapshotKey": "SR-08/disposition-history-history"
+   },
+   {
+    "rowID": "SR-09/historical-control",
+    "snapshotKey": "SR-09/historical-control-history"
+   },
+   {
+    "rowID": "SR-09/stale-checkpoint",
+    "snapshotKey": "SR-09/current-checkpoint-history"
+   },
+   {
+    "rowID": "SR-09/current-checkpoint",
+    "snapshotKey": "SR-09/current-checkpoint-history"
+   },
+   {
+    "rowID": "SR-09/historical-replay",
+    "snapshotKey": "SR-09/historical-control-history"
+   },
+   {
+    "rowID": "SR-10/availability-control",
+    "snapshotKey": "SR-10/availability-control-history"
+   },
+   {
+    "rowID": "SR-10/missing-bytes",
+    "snapshotKey": "SR-10/availability-control-history"
+   },
+   {
+    "rowID": "SR-11/unrelated-branch",
+    "snapshotKey": "SR-11/unrelated-branch"
+   },
+   {
+    "rowID": "SR-12/determinism-first",
+    "snapshotKey": "SR-12/determinism-history"
+   },
+   {
+    "rowID": "SR-12/determinism-second",
+    "snapshotKey": "SR-12/determinism-history"
+   },
+   {
+    "rowID": "SR-13/sr13-stale-package-assessment",
+    "snapshotKey": "SR-13/sr13-stale-package-assessment"
+   },
+   {
+    "rowID": "SR-13/sr13-fresh-package-assessment",
+    "snapshotKey": "SR-13/sr13-fresh-package-assessment"
+   },
+   {
+    "rowID": "SR-13b/sr13b-current",
+    "snapshotKey": "SR-13b/sr13b-current-endpoint"
+   },
+   {
+    "rowID": "SR-13b/sr13b-omission",
+    "snapshotKey": "SR-13b/sr13b-current-endpoint"
+   },
+   {
+    "rowID": "SR-13b/sr13b-historical-control",
+    "snapshotKey": "SR-13b/sr13b-historical-endpoint"
+   },
+   {
+    "rowID": "SR-14/sr14-v2-package-assessment",
+    "snapshotKey": "SR-14/sr14-v2-package-assessment"
+   },
+   {
+    "rowID": "SR-14/sr14-disposed-control",
+    "snapshotKey": "SR-14/sr14-disposed-control"
+   },
+   {
+    "rowID": "SR-14b/sr14b-v3-package-assessment",
+    "snapshotKey": "SR-14b/sr14b-v3-package-assessment"
+   },
+   {
+    "rowID": "SR-16/sr16-prior-package-assessment",
+    "snapshotKey": "SR-16/sr16-prior-package-assessment"
+   },
+   {
+    "rowID": "SR-16/sr16-unresolved",
+    "snapshotKey": "SR-16/sr16-unresolved-endpoint"
+   },
+   {
+    "rowID": "SR-16/sr16-omission-sr16-prior-request",
+    "snapshotKey": "SR-16/sr16-unresolved-endpoint"
+   },
+   {
+    "rowID": "SR-16/sr16-omission-sr16-prior-observation",
+    "snapshotKey": "SR-16/sr16-unresolved-endpoint"
+   },
+   {
+    "rowID": "SR-16/sr16-omission-sr16-prior-review-challenge",
+    "snapshotKey": "SR-16/sr16-unresolved-endpoint"
+   },
+   {
+    "rowID": "SR-16/sr16-disposed-control",
+    "snapshotKey": "SR-16/sr16-disposed-control"
+   }
+  ],
+  "profiles": [
+   "T0",
+   "T1",
+   "HB",
+   "T2",
+   "T3"
+  ],
+  "snapshots": [
+   "SR-00/normal-history",
+   "SR-01/positive-control-history",
+   "SR-02/revised-basis-control",
+   "SR-03/version-binding-history",
+   "SR-04/omitted-limitation-history",
+   "SR-05/challenge-history",
+   "SR-06/shared-source",
+   "SR-07/response-history-history",
+   "SR-08/disposition-history-history",
+   "SR-09/historical-control-history",
+   "SR-09/current-checkpoint-history",
+   "SR-10/availability-control-history",
+   "SR-11/unrelated-branch",
+   "SR-12/determinism-history",
+   "SR-13/sr13-stale-package-assessment",
+   "SR-13/sr13-fresh-package-assessment",
+   "SR-13b/sr13b-current-endpoint",
+   "SR-13b/sr13b-historical-endpoint",
+   "SR-14/sr14-v2-package-assessment",
+   "SR-14/sr14-disposed-control",
+   "SR-14b/sr14b-v3-package-assessment",
+   "SR-16/sr16-prior-package-assessment",
+   "SR-16/sr16-unresolved-endpoint",
+   "SR-16/sr16-disposed-control"
+  ]
+ },
+ "expectedSamples": {
+  "measuredVerifier": 5550,
+  "measuredReplay": 720,
+  "warmupVerifier": 555,
+  "warmupReplay": 72
+ },
+ "locks": {
+  "sourceLockDigest": "606fa94b5518aefd8a9e77b8397d412bfbb6b44712bc5f8e81e19a268a1bd797",
+  "inputLockSHA256": "38db36d826a0a140ff6e794fe1f3ca6d4e67ebf4e93b35bf68474717f13cd255",
+  "registrySHA256": "5283ab90449cc20d67ac0cca141f3712064e9c05775cd6822a5e6b5fa9f1a834",
+  "expectedOutcomesSHA256": "9d9bd0842c677b43a042ea239ade0f21520ea84b6535cc531dd25ee3ad0913a4"
+ },
+ "note": "Bukan benchmark transaksi tulis Fabric, jaringan, konsensus, atau eksekusi tool forensik. Cache filesystem dan JIT hangat setelah warmup. Kondisi mesin dicatat sederhana (loadavg awal/akhir); bukan jaminan mesin bebas gangguan."
+}

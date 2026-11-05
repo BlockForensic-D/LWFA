@@ -1,0 +1,98 @@
+{
+ "format": "LWFA_CLASS_SUMMARY_2",
+ "runID": "lwfa-v2.2-20261005T110130Z-b076ccc2",
+ "rows": 37,
+ "definitions": {
+  "hard": "jumlah baris dengan >=1 hard finding (hardDetected) pada profil itu",
+  "advisory": "jumlah baris T3 dengan >=1 advisory",
+  "any": "hard OR advisory (bukan accepted/rejected evidence)",
+  "unit": "baris asesmen; bukan insiden independen; bukan akurasi"
+ },
+ "classes": {
+  "A_PACKAGE_MANIPULATION": {
+   "n": 6,
+   "hard": {
+    "T0": 2,
+    "T1": 4,
+    "HB": 4,
+    "T2": 6,
+    "T3": 6
+   },
+   "advisory": {
+    "T3": 1
+   },
+   "any": {
+    "T3": 6
+   },
+   "operationalErrors": 0
+  },
+  "B_DISCLOSURE_OMISSION": {
+   "n": 5,
+   "hard": {
+    "T0": 0,
+    "T1": 0,
+    "HB": 0,
+    "T2": 0,
+    "T3": 5
+   },
+   "advisory": {
+    "T3": 4
+   },
+   "any": {
+    "T3": 5
+   },
+   "operationalErrors": 0
+  },
+  "C_HONEST_PACKAGE_OUTSTANDING_CONCERN": {
+   "n": 5,
+   "hard": {
+    "T0": 0,
+    "T1": 0,
+    "HB": 0,
+    "T2": 0,
+    "T3": 0
+   },
+   "advisory": {
+    "T3": 5
+   },
+   "any": {
+    "T3": 5
+   },
+   "operationalErrors": 0
+  },
+  "CONTROL": {
+   "n": 21,
+   "hard": {
+    "T0": 0,
+    "T1": 0,
+    "HB": 0,
+    "T2": 0,
+    "T3": 0
+   },
+   "advisory": {
+    "T3": 2
+   },
+   "any": {
+    "T3": 2
+   },
+   "operationalErrors": 0
+  }
+ },
+ "controlsWithAdvisory": [
+  {
+   "rowID": "SR-03/correct-version",
+   "advisories": [
+    "UNRESOLVED_PREDECESSOR_CHALLENGE"
+   ],
+   "interpretation": "Advisory yang diharapkan pada kontrol; bukan false positive otomatis"
+  },
+  {
+   "rowID": "SR-06/shared-source",
+   "advisories": [
+    "UNRESOLVED_PREDECESSOR_CHALLENGE"
+   ],
+   "interpretation": "Advisory yang diharapkan pada kontrol; bukan false positive otomatis"
+  }
+ ],
+ "notEvaluatedIsNotAcceptance": "NOT_EVALUATED, NOT_REPORTED, NOT_ASSESSED tidak sama dengan diterima."
+}

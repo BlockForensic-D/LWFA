@@ -1,0 +1,526 @@
+{
+ "format": "LWFA_VALIDATION_2",
+ "runID": "lwfa-v2.2-20261005T185348Z-840a665b",
+ "mode": "validate",
+ "structural": "PASS",
+ "scientificMatch": "PASS",
+ "overall": "PASS",
+ "stages": {
+  "capability": "REQUESTED",
+  "diagnostics": "REQUESTED",
+  "bench": "REQUESTED",
+  "cadence": "NOT_REQUESTED"
+ },
+ "checks": [
+  {
+   "id": "S01.receipt",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "format/runID/requestedStages"
+  },
+  {
+   "id": "S01.receipt.harness-version",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "run harnessVersion=2.2, this gate=2.2 (verify a run with the package version that produced it)"
+  },
+  {
+   "id": "S02.root.run-receipt.json",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "mandatory root file"
+  },
+  {
+   "id": "S02.root.run_all.log",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "mandatory root file"
+  },
+  {
+   "id": "S02.root.source-lock.json",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "mandatory root file"
+  },
+  {
+   "id": "S02.root.input-lock-before.json",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "mandatory root file"
+  },
+  {
+   "id": "S02.root.registry-snapshot.json",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "mandatory root file"
+  },
+  {
+   "id": "S02.root.input-lock-after.json",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "mandatory root file"
+  },
+  {
+   "id": "S02.root.source-lock-after.json",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "mandatory root file"
+  },
+  {
+   "id": "S02.root.validation.json-absent",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "validation.json must not exist before validation"
+  },
+  {
+   "id": "S02.source-lock",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "source-lock.json: format, keys, status PASS without problems, counts, digest recomputed: []"
+  },
+  {
+   "id": "S02.source-lock.pins",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "pinned identities in source-lock.json == config/source-pins.json and this harness package: []"
+  },
+  {
+   "id": "S02.harness-lock",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "this gate's package == the harness locked by the run: []"
+  },
+  {
+   "id": "S02.source-lock-after",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "source lock re-checked after the run: well formed, pinned identities, digest recomputed, equal to the before-run lock except createdAt and comparedTo (== source-lock.json): []"
+  },
+  {
+   "id": "S02.input-lock-before",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "before-run lock: well formed, digest recomputed from its file rows, equal to the pinned campaign: []"
+  },
+  {
+   "id": "S02.input-lock-after",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "after-run lock: well formed, digest recomputed from its file rows, pinned campaign, rows identical to the before-run lock: []"
+  },
+  {
+   "id": "S02.registry-snapshot",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "registry snapshot byte-identical to config/rows.json"
+  },
+  {
+   "id": "S02.registry.unique",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "registry rowIDs unique and count == expectedRowCount"
+  },
+  {
+   "id": "S03.capability.dir",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "requested stage directory"
+  },
+  {
+   "id": "S03.capability.manifest.runID",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "manifest runID/stage"
+  },
+  {
+   "id": "S03.capability.no-symlinks",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "id": "S03.capability.files-match-manifest",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "unlisted=[] missing=[]"
+  },
+  {
+   "id": "S03.capability.sha256",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "changed after manifest: []"
+  },
+  {
+   "id": "S03.capability.mandatory",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "missing mandatory: []"
+  },
+  {
+   "id": "S03.capability.known-files",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "files outside the run contract: []"
+  },
+  {
+   "id": "S03.diagnostics.dir",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "requested stage directory"
+  },
+  {
+   "id": "S03.diagnostics.manifest.runID",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "manifest runID/stage"
+  },
+  {
+   "id": "S03.diagnostics.no-symlinks",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "id": "S03.diagnostics.files-match-manifest",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "unlisted=[] missing=[]"
+  },
+  {
+   "id": "S03.diagnostics.sha256",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "changed after manifest: []"
+  },
+  {
+   "id": "S03.diagnostics.mandatory",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "missing mandatory: []"
+  },
+  {
+   "id": "S03.bench.dir",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "requested stage directory"
+  },
+  {
+   "id": "S03.bench.manifest.runID",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "manifest runID/stage"
+  },
+  {
+   "id": "S03.bench.no-symlinks",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "id": "S03.bench.files-match-manifest",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "unlisted=[] missing=[]"
+  },
+  {
+   "id": "S03.bench.sha256",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "changed after manifest: []"
+  },
+  {
+   "id": "S03.bench.mandatory",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "missing mandatory: []"
+  },
+  {
+   "id": "S03.bench.known-files",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "files outside the run contract: []"
+  },
+  {
+   "id": "S03.cadence.not-requested-absent",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "stage not requested before the run; its directory must not exist"
+  },
+  {
+   "id": "S05.mandatory-content",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "id": "C01.raw.exact-set",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "missing=0 extra=0"
+  },
+  {
+   "id": "C01.archived.exact-set",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "archived assessment copies: missing=0 extra=0"
+  },
+  {
+   "id": "C01.raw.envelope",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "185/185 envelopes valid; []"
+  },
+  {
+   "id": "C02.normalized.parse",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "185 records"
+  },
+  {
+   "id": "C02.normalized.schema",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "id": "C02.normalized.unique",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "duplicate (rowID, checker) keys: 0"
+  },
+  {
+   "id": "C02.normalized.keyset",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "missing=[] extra=[]"
+  },
+  {
+   "id": "C02.normalized.raw-refs",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "raw ref must be capability/raw/<rowKey>/<checker>.json with the file's SHA-256: []"
+  },
+  {
+   "id": "C02.normalized.checker-version",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "checkerVersion derived from the source lock: []"
+  },
+  {
+   "id": "C02.normalized.from-raw",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "185/185 records re-derived identically from raw; []"
+  },
+  {
+   "id": "C03.profile-table",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "header/key set ok=True; cells differing from normalized.jsonl: []"
+  },
+  {
+   "id": "C05.dimension-states",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "1850 records (want 1850 unique), header ok=True; values differing: []"
+  },
+  {
+   "id": "C04.class-summary",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "class_summary.json recomputed from normalized.jsonl"
+  },
+  {
+   "id": "X02.class-counts",
+   "kind": "scientific",
+   "status": "PASS",
+   "detail": "differ from expected (guide §2.2): []"
+  },
+  {
+   "id": "C06.cumulative-union",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "cumulative_union.json recomputed from normalized.jsonl (diagnostic label kept)"
+  },
+  {
+   "id": "C07.obligation-matrix",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "obligation_matrix.csv byte-identical to config/obligation_matrix.csv"
+  },
+  {
+   "id": "X01.expected-outcomes",
+   "kind": "scientific",
+   "status": "PASS",
+   "detail": "0 mismatches []"
+  },
+  {
+   "id": "X08.no-operational-errors",
+   "kind": "scientific",
+   "status": "PASS",
+   "detail": "records with execution != COMPLETED: 0 []"
+  },
+  {
+   "id": "X12.t3-obligations-assessed",
+   "kind": "scientific",
+   "status": "PASS",
+   "detail": "T3 creatorIdentity/authority/disclosureCoverage not assessed (evaluation incomplete): []"
+  },
+  {
+   "id": "X03.control-advisories",
+   "kind": "scientific",
+   "status": "PASS",
+   "detail": "controls with unexpected findings/advisories: []"
+  },
+  {
+   "id": "C08.replay-receipt-bound",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "replay receipt: t3CanonicalSHA256 == canonical SHA-256 of this run's raw T3 output; archivedCanonicalSHA256 == canonical SHA-256 of capability/archived/<row>.json whose bytes equal the pinned campaign file (input lock); snapshots == registry; counts consistent. archived not bound: []"
+  },
+  {
+   "id": "X05.replay-37-canonical",
+   "kind": "scientific",
+   "status": "PASS",
+   "detail": "replay_diffs=0 reproduced=37/37"
+  },
+  {
+   "id": "C09.requirements-recomputed",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "requirements_check.json == re-evaluation of config/requirements.json on raw T3 outputs"
+  },
+  {
+   "id": "X04.author-requirements",
+   "kind": "scientific",
+   "status": "PASS",
+   "detail": "37/37 passed (gate re-evaluation: 37)"
+  },
+  {
+   "id": "C10.compat-consistent",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "legacy CSV flags == normalized hardDetected/anyFinding and T3_reproduces_archive == replay receipt ([]); compat_check.json == gate comparison"
+  },
+  {
+   "id": "X06.legacy-compat",
+   "kind": "scientific",
+   "status": "PASS",
+   "detail": "gate comparison with reference/legacy_ladder (ms_* excluded): {'rq2_tier_ablation_offline_replay.csv': [], 'hashcoc_vs_tiers.csv': []}"
+  },
+  {
+   "id": "C11.hb-frozen-recomputed",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "frozen copy == pinned HashCoC comparison.csv; hb_vs_frozen_comparison.json == gate re-derivation from raw HB/T3"
+  },
+  {
+   "id": "X07.hb-frozen-24",
+   "kind": "scientific",
+   "status": "PASS",
+   "detail": "gate re-derivation: 24 pairs, problems []"
+  },
+  {
+   "id": "D01.normalized-from-raw",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "16 diagnostic records; []"
+  },
+  {
+   "id": "D00.summary",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "diagnostics summary runID"
+  },
+  {
+   "id": "C12.identity-scope-recomputed",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "identity-scope/summary.json == recomputation from identity_scope.csv and identity_scope_detail.csv"
+  },
+  {
+   "id": "X09.identity-scope",
+   "kind": "scientific",
+   "status": "PASS",
+   "detail": "{'recomputed': {'assessments': 37, 'P_subset_D': 36, 'D_equals_required': 37, 'T3_creatorBound': 37, 'withRecordsOutsideD': 19, 'occurrencesOutsideD': 109, 'uniqueSnapshotRecordPairsOutsideD': 82, 'uniqueCaseRecordsOutsideD': 52}, 'legacy': []}"
+  },
+  {
+   "id": "X10.D01-identity-outside-D",
+   "kind": "scientific",
+   "status": "PASS",
+   "detail": "HB treatment=MISMATCH/RECORD_ACTOR_CREATOR_MISMATCH; T3 treatment==control: True; T3 positive=MISMATCH"
+  },
+  {
+   "id": "X11.D02-missing-tool",
+   "kind": "scientific",
+   "status": "PASS",
+   "detail": "HB tool=NOT_OBTAINED; T3 binding=MATCH context=SATISFIED flags=[]; T1-T3 toolIntegrity=['NOT_REPORTED', 'NOT_REPORTED', 'NOT_REPORTED']"
+  },
+  {
+   "id": "B00.bench-validation",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "bench_validation.json status PASS"
+  },
+  {
+   "id": "B00.bench-params",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "bench_env params == params requested before the run"
+  },
+  {
+   "id": "B00.bench-provider-real",
+   "kind": "scientific",
+   "status": "PASS",
+   "detail": "provider=REAL (a STUB provider is never a scientific result)"
+  },
+  {
+   "id": "B00.bench-provider-locked",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "provider file=scripts/lib/bench_provider_real.js override=False sha256 == SHA256SUMS entry of scripts/lib/bench_provider_real.js (the label REAL alone is not enough)"
+  },
+  {
+   "id": "B00.bench-units",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "bench units == registry rows x profiles; snapshots == registry snapshots"
+  },
+  {
+   "id": "B00.bench-locks",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "bench ran under this run's source/input lock, registry, expected outcomes and harness version"
+  },
+  {
+   "id": "B04.bench-counts",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "expected samples, validated samples and calls consistent across bench_env and bench_validation"
+  },
+  {
+   "id": "B01.preflight-keyset",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "209 preflight keys (rows x profiles + snapshots)"
+  },
+  {
+   "id": "B02.preflight-vs-capability",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "preflight signatures not equal to the capability raw projection / replay receipt: []"
+  },
+  {
+   "id": "B03.raw-valid",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "measured=6270 expected=6270 (warmup 627 excluded); every sample bound to its preflight signature"
+  },
+  {
+   "id": "B06.summary-recomputed",
+   "kind": "structural",
+   "status": "PASS",
+   "detail": "recomputed summary differs: [] (numericPolicy LWFA_EXACT_RATIONAL_HALF_EVEN_6DP_1)"
+  }
+ ]
+}

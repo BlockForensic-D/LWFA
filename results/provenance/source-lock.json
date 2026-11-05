@@ -1,0 +1,57 @@
+{
+ "format": "LWFA_SOURCE_LOCK_2",
+ "runID": "lwfa-v2.2-20261005T185348Z-840a665b",
+ "createdAt": "2026-10-05T18:53:48.325Z",
+ "status": "PASS",
+ "problems": [],
+ "harness": {
+  "version": "2.2",
+  "sha256sumsSHA256": "c605e9c61bb811431bb53ba350f97c36785ca538ffbc64436919a5de635edac0",
+  "filesVerified": 38
+ },
+ "kit": {
+  "root": "/home/labnuc/2labforensic/LWFA_PCC_Evaluation_v081",
+  "releaseManifestSHA256": "45ce4ed4d77d45a68c928538d801deb7fb3a3a75fb4a1c7fcbcd88a37b67ec4d",
+  "filesVerified": 190,
+  "expectationsSHA256": "bf50c919a6be8f5bbe82d9d76bbea2b3ec4b64202ab349c36478f21ac35b1412",
+  "dependencies": {
+   "lockSHA256": "edb83048733bcf9f7b240aaf3b8b3661147fd2789e8d6ae78570898295f552c3",
+   "packagesVerified": 79,
+   "fabricShim": "2.5.8",
+   "scope": "versi package.json per paket terhadap package-lock.json; isi file node_modules tidak dipin, tetapi digest pohonnya dicatat dan harus sama sebelum dan sesudah run",
+   "nodeModulesTree": {
+    "path": "disclosure/node_modules",
+    "sha256": "1e0a7079f8204f2e614836a78f3573f7cd256c45c6ace9e7ff24aa6305dd935a",
+    "entries": 2379,
+    "digestEncoding": "SHA256_UTF8_JSON_STRINGIFY_SORTED_TREE_ROWS (files {path,bytes,sha256}; symlinks {path,link})"
+   }
+  }
+ },
+ "hashcoc": {
+  "root": "/home/labnuc/2labforensic/LWFA_HashCoC_Comparison_v010",
+  "releaseFilesSHA256": "5135cc4e0108c9e2e0af3434a00638a971ca9b212a73282b206c72a73f45846d",
+  "filesVerified": 130,
+  "sourceOriginSHA256": "73d57a3cfd0b10e5ec0bc18f5d290447ded43b11ca511d675c4c302f99a3cba4",
+  "baselineSHA256": "d7bf408d0e7535395f41ec6ec1a80ae592df146107a19433839c2600cb37062b"
+ },
+ "vendorEquivalence": {
+  "filesCompared": 86
+ },
+ "pins": {
+  "file": "config/source-pins.json",
+  "sha256": "c4e5044e52a649e124d32b271148566e791a0b6b884652fe2de8297ea1c207cb"
+ },
+ "runtime": {
+  "node": "v20.19.3",
+  "platform": "linux",
+  "arch": "x64",
+  "python": "Python 3.10.12"
+ },
+ "sourceInventory": {
+  "files": 358,
+  "encoding": "canonSha of sorted [scope, path, observed sha256] for every verified harness, kit-release and HashCoC-release file"
+ },
+ "sourceInventoryDigest": "5adfa9ca7e2df3f80fc15a8166422ad0c48ba64b202ee9ce0865ed00b39d7c4c",
+ "comparedTo": null,
+ "digest": "606fa94b5518aefd8a9e77b8397d412bfbb6b44712bc5f8e81e19a268a1bd797"
+}
